@@ -45,16 +45,16 @@ public class RealPhoneController extends HttpServlet{
         }
     }
 
+    private String registerRealPhone(String token){
+        return dao.insertRealPhoneToken(token) == true ?
+                Util.makeCodeResponse(dao.getConnFromRealToken(token).getCode()) : Util.makeErrorResponse("이미 등록 되어 있는 기기임임");
+    }
+
     private String sendMessage(String token, String message){
         MessageManager manager = new MessageManager(token);
         boolean response = manager.doRequest("5x1", "9:50", message);
         return response == true ?
                 Util.makeSuccessResponse("메시지 요청 성공") : Util.makeErrorResponse("메시지 요청 실패");
-    }
-
-    private String registerRealPhone(String token){
-        dao.insertRealPhoneToken(token);
-        return dao.getConnFromRealToken(token).getCode();
     }
 
     private String resetConnection(String token){
@@ -64,6 +64,6 @@ public class RealPhoneController extends HttpServlet{
 
     private String resetCode(String token){
         return dao.resetConnection(token) == true ?
-                Util.makeSuccessResponse("리셋 성공") : Util.makeErrorResponse("리셋 실패. 등록 되어있지 않음");
+                Util.makeCodeResponse(dao.getConnFromRealToken(token).getCode()) : Util.makeErrorResponse("리셋 실패. 등록 되어있지 않음");
     }
 }

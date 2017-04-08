@@ -37,7 +37,7 @@ public class ChangeDAO {
      * @param token
      * @return
      */
-    public void insertRealPhoneToken(String token) {
+    public boolean insertRealPhoneToken(String token) {
         String sql = "insert into conn(realtoken, code) values (?, ?) ";
 
         String code = createRandomCode();
@@ -46,8 +46,9 @@ public class ChangeDAO {
             preparedStatement.setString(1, token);
             preparedStatement.setString(2, code);
         } catch (SQLException e) {
-            e.printStackTrace();
+            return false;
         }
+        return true;
     }
 
     /**

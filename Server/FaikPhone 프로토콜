@@ -1,13 +1,67 @@
-register (realPhone)
-"type" : "register",
-"token" : "dasdasdasdasdas"
+================== Real Phone ====================
 
-register (server -> realPhone)
-
-"type" : "send_code",
+register
+{
+  "type" : "register",
+  "token" : "dasdasdasdasdas"
+}
+register response (성공시)
+{
+  "type" : "success",
+  "code" : "dasdasdas1312d"
+}
+send message (raelphone)
+{
+  "type" : "send_message",
+  "token" : "sdasdasdassdasd",
+  "message" : "dasdasdasdas"
+}
+reset connection
+{
+  "type" : "reset_conn",
+  "token" : "dasdsaasda"
+}
+reset code
+{
+  "type" : "reset_code",
+  "token" : "dasdsaasda"
+}
+reset code response (성공시)
+{
+"type" : "success",
 "code" : "dasdasdas1312d"
+}
+success code (모든 성공 응답)
+{
+  "type" : "success",
+  "message" : "** 요청 성공"
+}
+error code (모든 에러 응답)
+{
+  "type" : "error",
+  "message" : "***가 올바르지 않음"
+}
 
-register (fakePhone)
-"type" : "register",
-"token" : "ddasdasdsa"
-"code" : "dasdasdas1312d"
+================== Fake Phone =======================
+register
+{
+  "type" : "register",
+  "token" : "ddasdasdsa"
+  "code" : "dasdasdas1312d"
+}
+send message (fakephone)
+{
+  "type" : "send_message",
+  "token" : "sdasdasdassdasd",
+  "message" : "dasdasdasdas"
+}
+success code (모든 성공 응답)
+{
+  "type" : "success",
+  "message" : "** 요청 성공"
+}
+error code (모든 에러 응답)
+{
+  "type" : "error",
+  "message" : "***가 올바르지 않음"
+}

@@ -18,4 +18,10 @@ public class Util {
         object.put("message", message);
         return object.toString();
     }
+    public static String makeCodeResponse(String code){
+        JSONObject object = new JSONObject();
+        object.put("type", "success");
+        object.put("code", code);
+        return object.toString();
+    }
 }
