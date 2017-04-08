@@ -6,7 +6,7 @@
     <display-name>Apache-Axis</display-name>
     <servlet>
         <servlet-name>ChangeController</servlet-name>
-        <servlet-class>com.faikphone.server.controller.ChangeController</servlet-class>
+        <servlet-class>com.faikphone.server.controller.RealPhoneController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ChangeController</servlet-name>
