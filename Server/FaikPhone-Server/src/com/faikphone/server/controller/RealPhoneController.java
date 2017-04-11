@@ -17,8 +17,6 @@ import java.net.URL;
  * Created by dsm_025 on 2017-03-30.
  */
 public class RealPhoneController extends HttpServlet{
-    private final String SERVER_KEY = "";
-    private final String url = "https://fcm.googleapis.com/fcm/send";
     private ChangeDAO dao;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -42,6 +40,9 @@ public class RealPhoneController extends HttpServlet{
                 writer.println(resetCode(request.getParameter("token")));
                 writer.close();
                 break;
+            case "reset_all":
+                writer.println(resetAll(request.getParameter("token")));
+                writer.close();
         }
     }
 
@@ -58,12 +59,17 @@ public class RealPhoneController extends HttpServlet{
     }
 
     private String resetConnection(String token){
-        return dao.resetConnection(token) == true ?
+        return dao.resetConnection(token, true) == true ?
                 Util.makeSuccessResponse("리셋 성공") : Util.makeErrorResponse("리셋 실패. 등록 되어있지 않음");
     }
 
     private String resetCode(String token){
-        return dao.resetConnection(token) == true ?
+        return dao.resetCode(token) == true ?
                 Util.makeCodeResponse(dao.getConnFromRealToken(token).getCode()) : Util.makeErrorResponse("리셋 실패. 등록 되어있지 않음");
+    }
+
+    private String resetAll(String token){
+        return dao.resetAll(token, true) == true ?
+                Util.makeCodeResponse("리셋 성공") : Util.makeErrorResponse("리셋 실패. 등록 되어있지 않음");
     }
 }

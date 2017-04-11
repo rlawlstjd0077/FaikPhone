@@ -13,7 +13,7 @@ import java.io.IOException;
 public class MessageManager {
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private final String URL = "https://fcm.googleapis.com/fcm/send";
-    private final String SERVER_KEY = "key=AAAAWGtqijs:APA91bEj253aBLOCV3hFtYl7umYBJlmDryas8xh3yhR-SPH8uXepDQwZKAlRJqw9hmuW26h4bKq-sWKN_S0ZzkVRo4FVB52ZWJtZjMRtfm4XkqGt-pTZGrjSudASFUJ7N0p6Y9EjZoU9";
+    private final String SERVER_KEY = "";
     private String token;
 
     public MessageManager(String token){

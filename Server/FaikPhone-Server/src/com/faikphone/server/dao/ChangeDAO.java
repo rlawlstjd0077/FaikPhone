@@ -76,20 +76,42 @@ public class ChangeDAO {
     /**
      * FaikPhone과의 Connetion을 해제 하는 메소드
      * @param token
+     * @param state : true = realPhone, false = fakePhone
      * @return
      */
-    public boolean resetConnection(String token) {
-        if (isTokenRegister(token) == false) {
-            return false;
+    public boolean resetConnection(String token, boolean state) {
+        if (isTokenRegister(token)) {
+            String sql = "update conn set faketoken = '' where ";
+            sql += state ? "realtoken = '" + token + "'" : "faketoken = '" + token + "'";
+            try {
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.execute();
+            } catch (SQLException e) {
+                return false;
+            }
+            return true;
         }
-        String sql = "update conn set faketoken = '' where realtoken = '" + token + "'";
-        try {
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.execute();
-        } catch (SQLException e) {
-            return false;
+        return false;
+    }
+
+    /**
+     * 모든 정보를 reset하는 메소드
+     * @param token
+     * @param state : true = realPhone, false = fakePhone
+     * @return
+     */
+    public boolean resetAll(String token, boolean state) {
+        if(isTokenRegister(token)){
+            String sql = state == true ? "delete from conn where realtoken = " + token : "delete from conn where faketoken = " + token ;
+            try{
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.execute();
+            } catch (SQLException e) {
+                return false;
+            }
+            return true;
         }
-        return true;
+        return false;
     }
 
     /**
@@ -226,4 +248,5 @@ public class ChangeDAO {
         }
         return code;
     }
+
 }

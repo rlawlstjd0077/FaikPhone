@@ -15,7 +15,6 @@ import java.io.PrintWriter;
  * Created by dsm_025 on 2017-03-30.
  */
 public class FakePhoneController extends HttpServlet{
-    private final String SERVER_KEY = "";
     ChangeDAO dao;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -30,6 +29,12 @@ public class FakePhoneController extends HttpServlet{
                 writer.println(sendMessage(request.getParameter("token"), request.getParameter("message")));
                 writer.close();
                 break;
+            case "reset_all":
+                writer.println(resetAll(request.getParameter("token")));
+                writer.close();
+            case "reset_conn":
+                writer.println(resetConnection(request.getParameter("token")));
+                writer.close();
         }
     }
 
@@ -43,5 +48,15 @@ public class FakePhoneController extends HttpServlet{
     private String registerFakePhone(String token, String code){
         return dao.insertFaikPhoneToken(token, code) == true ?
                 Util.makeSuccessResponse("인증 성공") : Util.makeErrorResponse("인증 실패");
+    }
+
+    private String resetAll(String token){
+        return dao.resetAll(token, false) == true ?
+                Util.makeCodeResponse("리셋 성공") : Util.makeErrorResponse("리셋 실패. 등록 되어있지 않음");
+    }
+
+    private String resetConnection(String token){
+        return dao.resetConnection(token, false) == true ?
+                Util.makeSuccessResponse("리셋 성공") : Util.makeErrorResponse("리셋 실패. 등록 되어있지 않음");
     }
 }
