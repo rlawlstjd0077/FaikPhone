@@ -33,11 +33,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MessageManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+            <state relative-caret-position="452">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FaikPhone 프로토콜" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FaikPhone 프로토콜">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="60" column="1" lean-forward="true" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -46,7 +56,7 @@
       <file leaf-file-name="RealPhoneController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
+            <state relative-caret-position="627">
               <caret line="56" column="33" lean-forward="true" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
               <folding />
             </state>
@@ -96,6 +106,7 @@
         <option value="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java" />
         <option value="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/FakePhoneController.java" />
         <option value="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java" />
+        <option value="$PROJECT_DIR$/FaikPhone 프로토콜" />
       </list>
     </option>
   </component>
@@ -315,12 +326,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491868068166</updated>
-      <workItem from="1491868070617" duration="2950000" />
+      <workItem from="1491868070617" duration="3159000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2950000" />
+    <option name="totallyTimeSpent" value="3159000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -390,9 +401,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
+        <state relative-caret-position="627">
           <caret line="56" column="33" lean-forward="true" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
           <folding />
         </state>
@@ -406,18 +433,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/Util.java">
+    <entry file="file://$PROJECT_DIR$/FaikPhone 프로토콜">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        <state relative-caret-position="418">
+          <caret line="60" column="1" lean-forward="true" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
           <folding />
         </state>
       </provider>

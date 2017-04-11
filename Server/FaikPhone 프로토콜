@@ -28,19 +28,16 @@ reset code
 }
 reset code response (성공시)
 {
-"type" : "success",
-"code" : "dasdasdas1312d"
+    "type" : "success",
+    "code" : "dasdasdas1312d"
 }
-success code (모든 성공 응답)
+reset all
 {
-  "type" : "success",
-  "message" : "** 요청 성공"
+    "type" : "reset_all",
+    "token" : "Dasdsadasd"
 }
-error code (모든 에러 응답)
-{
-  "type" : "error",
-  "message" : "***가 올바르지 않음"
-}
+
+
 
 ================== Fake Phone =======================
 register
@@ -55,6 +52,18 @@ send message (fakephone)
   "token" : "sdasdasdassdasd",
   "message" : "dasdasdasdas"
 }
+reset connection
+{
+  "type" : "reset_conn",
+  "token" : "dasdsaasda"
+}
+reset all
+{
+    "type" : "reset_all",
+    "token" : "Dasdsadasd"
+}
+
+
 success code (모든 성공 응답)
 {
   "type" : "success",
