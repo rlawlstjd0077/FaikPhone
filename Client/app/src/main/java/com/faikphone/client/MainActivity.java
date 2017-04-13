@@ -42,11 +42,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(
                         new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION), REQUEST_MANAGE_OVERLAY_PERMISSION);
                 return false;
-            } else {
-                return true;
             }
-        } else {
-            return true;
         }
+
+        return true;
     }
 }

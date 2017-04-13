@@ -10,6 +10,17 @@
         android:layout_marginRight="6dp"
         android:layout_marginEnd="6dp"
         android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/iv_battery"
+        android:layout_toStartOf="@id/iv_battery"
+        android:src="@drawable/ic_signal" />
+
+    <ImageView
+        android:id="@+id/iv_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/tv_time"
         android:layout_toStartOf="@id/tv_time"
         android:src="@drawable/ic_battery" />
