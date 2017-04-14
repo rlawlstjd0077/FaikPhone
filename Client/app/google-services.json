@@ -22,6 +22,43 @@
       "api_key": [
         {
           "current_key": "AIzaSyBoISh2Thm4kWfoqqKw_a2tgqSVX2ikW4M"
+        },
+        {
+          "current_key": "AIzaSyB9vKulGMZpkVJnwszsPCG8g-vwiU3NbCA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379759266363:android:d63cf5cc3346daeb",
+        "android_client_info": {
+          "package_name": "com.faikphone.client"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379759266363-in0ct1l57uot12677nqqi0np9qbeahiq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoISh2Thm4kWfoqqKw_a2tgqSVX2ikW4M"
+        },
+        {
+          "current_key": "AIzaSyB9vKulGMZpkVJnwszsPCG8g-vwiU3NbCA"
         }
       ],
       "services": {
