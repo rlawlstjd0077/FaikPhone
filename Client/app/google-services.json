@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "379759266363",
+    "firebase_url": "https://faikphone-162423.firebaseio.com",
+    "project_id": "faikphone-162423",
+    "storage_bucket": "faikphone-162423.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379759266363:android:d740957295e3611a",
+        "android_client_info": {
+          "package_name": "com.example.dsm_025.faikphone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379759266363-in0ct1l57uot12677nqqi0np9qbeahiq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoISh2Thm4kWfoqqKw_a2tgqSVX2ikW4M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
