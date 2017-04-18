@@ -66,7 +66,7 @@ public class FakeStatusBarService extends Service {
             }
         }
 
-        registerReceiver(mTimeChangedReceiver, new IntentFilter(Intent.ACTION_TIME_CHANGED));
+        registerReceiver(mTimeChangedReceiver, new IntentFilter(Intent.ACTION_TIME_TICK));
     }
 
     @Override
@@ -91,7 +91,8 @@ public class FakeStatusBarService extends Service {
     private BroadcastReceiver mTimeChangedReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (intent.getAction().equals(Intent.ACTION_TIME_CHANGED)) {
+            String action = intent.getAction();
+            if (action.equals(Intent.ACTION_TIME_TICK)) {
                 setCurrentTime();
             }
         }
