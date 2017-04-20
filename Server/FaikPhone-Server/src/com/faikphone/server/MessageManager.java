@@ -20,11 +20,11 @@ public class MessageManager {
         this.token = token;
     }
 
-    public boolean doRequest(String score, String time, String message){
+    public boolean doRequest(String message){
         final OkHttpClient client = new OkHttpClient();
-        String bodyData = createBodyData(score, time, message);
+        JSONObject bodyData = createBodyData(message);
 
-        RequestBody body = RequestBody.create(JSON, bodyData);
+        RequestBody body = RequestBody.create(JSON, bodyData.toString());
         final Request request = new Request.Builder()
                 .url(URL)
                 .post(body)
@@ -32,24 +32,25 @@ public class MessageManager {
                 .build();
         try {
             Response response = client.newCall(request).execute();
+            System.out.println("response : " + response);
         } catch (IOException e) {
             return false;
         }
         return true;
     }
 
-    public String createBodyData(String score, String time, String message){
+    public JSONObject createBodyData(String message){
         JSONObject object = new JSONObject();
         try {
             JSONObject data = new JSONObject();
             object.put("to", token);
-            data.put("message", message);
-            data.put("score", score);
-            data.put("time", time);
+            data.put("message",  message);
+            data.put("score","5x1");
+            data.put("time", "9:50");
             object.put("data", data);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return object.toString();
+        return object;
     }
 }

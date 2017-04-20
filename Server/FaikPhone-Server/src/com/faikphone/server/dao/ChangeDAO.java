@@ -233,7 +233,7 @@ public class ChangeDAO {
     }
 
     /**
-     * 인증 코드를 create 하는 메소ㅔ드
+     * 인증 코드를 create 하는 메소드
      *
      * @return code
      */
@@ -249,4 +249,17 @@ public class ChangeDAO {
         return code;
     }
 
+    /**
+     * 인증 코드를 얻어 오는 메소드
+     * @return AuthCode
+     */
+    public String getAuthCode(String realToken){
+        try {
+            ResultSet resultSet = selectResultSetFromRealToken(realToken);
+            return resultSet.getString("code");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

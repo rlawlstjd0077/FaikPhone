@@ -66,11 +66,13 @@ reset all
 
 success code (모든 성공 응답)
 {
-  "type" : "success",
-  "message" : "** 요청 성공"
+  "type" : "xxxx_response",
+  "state" : true,
+  "message" : "Success"
 }
 error code (모든 에러 응답)
 {
-  "type" : "error",
-  "message" : "***가 올바르지 않음"
+  "type" : "xxxx_response",
+  "state" : false,
+  "message" : "Failed"
 }
