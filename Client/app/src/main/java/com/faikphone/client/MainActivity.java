@@ -5,8 +5,11 @@ import android.os.Build;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import at.markushi.ui.CircleButton;
 import butterknife.BindView;
@@ -22,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        HttpClient client = new HttpClient(true);
+        client.doRegister("asdsadas");
 
         this.appPreferences = FaikPhoneApplication.getAppPreferences();
         setContentView(R.layout.activity_main);
@@ -32,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         }else{  //fakePhone
             getSupportActionBar().setTitle("FaikPhone(Fake Mode)");
         }
+        Log.d("phone token : ", FirebaseInstanceId.getInstance().getToken());
     }
 
     @OnClick ({R.id.excuteButton})

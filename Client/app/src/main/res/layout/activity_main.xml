@@ -19,5 +19,4 @@
         android:src="@drawable/ic_signal"
         app:cb_color="#99CC00"
         app:cb_pressedRingWidth="8dip" />
-
 </RelativeLayout>

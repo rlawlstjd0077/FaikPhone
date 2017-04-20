@@ -13,8 +13,8 @@ public class AppPreferences {
     private SharedPreferences.Editor editor;
     private Context context;
 
-    public static final String KeyMode = "mode";
-    public static final String KeyCode = "code";
+    public static final String KEY_MODE = "mode";
+    public static final String KEY_CODE = "code";
 
     public AppPreferences(Context context){
         this.sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
@@ -23,20 +23,22 @@ public class AppPreferences {
     }
 
     public boolean getPhoneMode(){
-        return sharedPreferences.getBoolean(KeyMode, false);
+        return sharedPreferences.getBoolean(KEY_MODE, false);
     }
 
-    public void setKeyMode(boolean state){
-        editor.putBoolean(KeyMode, state);
+    public void setPhoneMode(boolean state){
+        editor.putBoolean(KEY_MODE, state);
         editor.commit();
     }
 
     public String getKeyCode(){
-        return sharedPreferences.getString(KeyCode, null);
+        return sharedPreferences.getString(KEY_CODE, null);
     }
 
     public void setKeyCode(String code){
-        editor.putString(KeyCode, code);
+        editor.putString(KEY_CODE, code);
         editor.commit();
     }
+
+
 }

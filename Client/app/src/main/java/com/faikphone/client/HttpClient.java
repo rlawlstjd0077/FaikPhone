@@ -1,20 +1,11 @@
 package com.faikphone.client;
 
 
-import android.util.Log;
-
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
-import com.loopj.android.http.JsonHttpResponseHandler;
-
 import java.io.IOException;
 
-import cz.msebera.android.httpclient.Header;
 import okhttp3.HttpUrl;
-import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**
@@ -22,7 +13,7 @@ import okhttp3.Response;
  */
 
 public class HttpClient {
-    private String url = "http://10.156.145.70:8999/";
+    private String url = "http://10.156.145.193:8999/";
     private boolean state;
     private final OkHttpClient client;
 
@@ -35,7 +26,7 @@ public class HttpClient {
     public void doRegister(String token) {
         HttpUrl.Builder urlBuilder = createBuilder("register", token);
         final Request request = getRequest(urlBuilder);
-        doRequest(request);
+        Response response = doRequest(request);
     }
 
     public void doSendMessage(String msg, String token){
