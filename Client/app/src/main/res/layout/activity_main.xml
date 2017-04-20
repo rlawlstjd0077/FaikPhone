@@ -11,13 +11,4 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.faikphone.client.MainActivity">
 
-    <at.markushi.ui.CircleButton
-        android:id="@+id/excuteButton"
-        android:layout_centerInParent="true"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_signal"
-        app:cb_color="#99CC00"
-        app:cb_pressedRingWidth="8dip" />
-
 </RelativeLayout>

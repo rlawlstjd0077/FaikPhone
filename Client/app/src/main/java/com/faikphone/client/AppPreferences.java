@@ -13,8 +13,9 @@ public class AppPreferences {
     private SharedPreferences.Editor editor;
     private Context context;
 
-    public static final String KeyMode = "mode";
-    public static final String KeyCode = "code";
+    public static final String KEY_PHONE_MODE = "phoneMode";
+    public static final String KEY_AUTH_CODE = "authCode";
+    public static final String KEY_FAKE_STATUS_BAR_MODE = "fakeStatusBarMode";
 
     public AppPreferences(Context context){
         this.sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
@@ -23,20 +24,28 @@ public class AppPreferences {
     }
 
     public boolean getPhoneMode(){
-        return sharedPreferences.getBoolean(KeyMode, false);
+        return sharedPreferences.getBoolean(KEY_PHONE_MODE, false);
     }
 
-    public void setKeyMode(boolean state){
-        editor.putBoolean(KeyMode, state);
+    public void setPhoneMode(boolean state){
+        editor.putBoolean(KEY_PHONE_MODE, state);
         editor.commit();
     }
 
     public String getKeyCode(){
-        return sharedPreferences.getString(KeyCode, null);
+        return sharedPreferences.getString(KEY_AUTH_CODE, null);
     }
 
     public void setKeyCode(String code){
-        editor.putString(KeyCode, code);
+        editor.putString(KEY_AUTH_CODE, code);
         editor.commit();
+    }
+
+    public boolean isFakeStatusBarMode() {
+        return sharedPreferences.getBoolean(KEY_FAKE_STATUS_BAR_MODE, false);
+    }
+
+    public void setFakeStatusBarMode(boolean mode) {
+        editor.putBoolean(KEY_FAKE_STATUS_BAR_MODE, mode).commit();
     }
 }

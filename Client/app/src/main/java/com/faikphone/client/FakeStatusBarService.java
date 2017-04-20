@@ -18,7 +18,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -28,6 +27,7 @@ import java.util.Locale;
 
 public class FakeStatusBarService extends Service {
 
+    private AppPreferences mAppPrefs;
     private WindowManager mWindowManager;
     private View mView;
     private TextView mTimeTV;
@@ -36,44 +36,58 @@ public class FakeStatusBarService extends Service {
     public void onCreate() {
         super.onCreate();
 
-        mWindowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
+        mAppPrefs = new AppPreferences(this);
 
-        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-        mView = layoutInflater.inflate(R.layout.view_fake_status_bar, null);
+        if (mAppPrefs.isFakeStatusBarMode()) {
+            mWindowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
 
-        mTimeTV = (TextView) mView.findViewById(R.id.tv_time);
-        setCurrentTime();
+            LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+            mView = layoutInflater.inflate(R.layout.view_fake_status_bar, null);
 
-        WindowManager.LayoutParams params = new WindowManager.LayoutParams(
-                WindowManager.LayoutParams.MATCH_PARENT,
-                (int) DensityConverter.dpToPx(this, 28),
-                // Allows the view to be on top of the StatusBar
-                WindowManager.LayoutParams.TYPE_SYSTEM_ERROR,
-                // Keeps the button presses from going to the background window
-                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE |
-                        // Enables the notification to receive touch events
-                        WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL |
-                        // Draws over status bar
-                        WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
-                PixelFormat.TRANSLUCENT);
-        params.gravity = Gravity.TOP | Gravity.CENTER;
+            mTimeTV = (TextView) mView.findViewById(R.id.tv_time);
+            setCurrentTime();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (Settings.canDrawOverlays(this)) {
-                mWindowManager.addView(mView, params);
-            } else {
-                Toast.makeText(this, "권한이 필요합니다.", Toast.LENGTH_SHORT).show();
+            WindowManager.LayoutParams params = new WindowManager.LayoutParams(
+                    WindowManager.LayoutParams.MATCH_PARENT,
+                    (int) DensityConverter.dpToPx(this, 28),
+                    // Allows the view to be on top of the StatusBar
+                    WindowManager.LayoutParams.TYPE_SYSTEM_ERROR,
+                    // Keeps the button presses from going to the background window
+                    WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE |
+                            // Enables the notification to receive touch events
+                            WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL |
+                            // pass touch event to real status bar behind this view
+                            WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM |
+                            // Draws over status bar
+                            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+                    PixelFormat.TRANSLUCENT);
+            params.gravity = Gravity.TOP | Gravity.CENTER;
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if (Settings.canDrawOverlays(this)) {
+                    mWindowManager.addView(mView, params);
+                } else {
+                    Toast.makeText(this, "권한이 필요합니다.", Toast.LENGTH_SHORT).show();
+                }
             }
-        }
 
-        registerReceiver(mTimeChangedReceiver, new IntentFilter(Intent.ACTION_TIME_TICK));
+            registerReceiver(mTimeChangedReceiver, new IntentFilter(Intent.ACTION_TIME_TICK));
+        } else {
+            stopSelf();
+        }
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         if (mView != null) mWindowManager.removeView(mView);
-        unregisterReceiver(mTimeChangedReceiver);
+        if (mTimeChangedReceiver != null) {
+            try {
+                unregisterReceiver(mTimeChangedReceiver);
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Nullable
