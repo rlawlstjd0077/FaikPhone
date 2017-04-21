@@ -2,10 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="28dp"
-    android:background="@android:color/black"
+    android:background="@color/colorFakeStatusBarBackground"
     android:focusable="false"
     android:focusableInTouchMode="false"
     android:clickable="false">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_centerVertical="true"
+        android:text="@string/mobile_carrier"
+        android:textColor="@android:color/white" />
 
     <ImageView
         android:layout_width="wrap_content"

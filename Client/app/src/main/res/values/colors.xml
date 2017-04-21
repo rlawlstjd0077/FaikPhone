@@ -3,6 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="colorFakeStatusBarBackground">#000000</color>
     <color name="colorCallInform">#6DBD4C</color>
     <color name="colorCallReceive">#4CAF50</color>
     <color name="colorCallRefusal">#F44336</color>

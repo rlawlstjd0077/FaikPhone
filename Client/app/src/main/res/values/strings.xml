@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Client</string>
+    <string name="app_name">FaikPhone</string>
+
+    <string name="mobile_carrier">SKT</string>
 </resources>
