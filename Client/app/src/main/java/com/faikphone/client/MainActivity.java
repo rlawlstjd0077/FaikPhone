@@ -13,13 +13,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         if (checkDrawOverlayPermission()) {
             startService(new Intent(this, FakeStatusBarService.class));
         }
 
         this.appPreferences = FaikPhoneApplication.getAppPreferences();
-        setContentView(R.layout.activity_main);
         if(appPreferences.getPhoneMode()){  //realPhone
             getSupportActionBar().setTitle("FaikPhone(Real Mode)");
         }else{  //fakePhone
