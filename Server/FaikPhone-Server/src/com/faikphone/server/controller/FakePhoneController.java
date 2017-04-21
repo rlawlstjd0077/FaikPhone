@@ -18,11 +18,11 @@ public class FakePhoneController extends HttpServlet{
     ChangeDAO dao;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("서버 접속");
         dao = ChangeDAO.getInstance();
         PrintWriter writer = response.getWriter();
         switch (request.getParameter("type").toString()) {
             case "register":
+                System.out.println("req register");
                 writer.print(registerFakePhone(request.getParameter("token"), request.getParameter("code")));
                 break;
             case "send_message":
@@ -40,23 +40,27 @@ public class FakePhoneController extends HttpServlet{
 
     private String sendMessage(String token, String message){
         MessageManager manager = new MessageManager(token);
-        boolean response = manager.doRequest("5x1", "9:50", message);
+        boolean response = manager.doRequest(message);
         return response == true ?
-                Util.makeSuccessResponse("메시지 요청 성공") : Util.makeErrorResponse("메시지 요청 실패");
+                Util.makeSuccessResponse("send_message_response", "Message Request Success") :
+                Util.makeErrorResponse("send_message_response", "Message Request Failed");
     }
 
     private String registerFakePhone(String token, String code){
         return dao.insertFaikPhoneToken(token, code) == true ?
-                Util.makeSuccessResponse("인증 성공") : Util.makeErrorResponse("인증 실패");
+                Util.makeSuccessResponse("register_response", "Certification Success") :
+                Util.makeErrorResponse("register_response", "Certification Failed");
     }
 
     private String resetAll(String token){
         return dao.resetAll(token, false) == true ?
-                Util.makeCodeResponse("리셋 성공") : Util.makeErrorResponse("리셋 실패. 등록 되어있지 않음");
+                Util.makeSuccessResponse("reset_all_response", "Reset Success") :
+                Util.makeErrorResponse("reset_all_response", "Reset Failed");
     }
 
     private String resetConnection(String token){
         return dao.resetConnection(token, false) == true ?
-                Util.makeSuccessResponse("리셋 성공") : Util.makeErrorResponse("리셋 실패. 등록 되어있지 않음");
+                Util.makeSuccessResponse("reset_conn_response", "Reset Success") :
+                Util.makeErrorResponse("reset_conn_response", "Reset Failed");
     }
 }

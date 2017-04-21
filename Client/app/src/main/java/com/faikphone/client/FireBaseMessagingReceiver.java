@@ -1,10 +1,11 @@
 package com.faikphone.client;
 
 import android.content.Intent;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -12,10 +13,11 @@ import org.json.JSONObject;
  * Created by dsm_025 on 2017-04-13.
  */
 
-public class FireBaseMessagingReciever extends FirebaseMessagingService{
+public class FireBaseMessagingReceiver extends FirebaseMessagingService{
     AppPreferences appPreferences = FaikPhoneApplication.getAppPreferences();
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
+        Log.d("onMessageReceived: ", remoteMessage.getData().get("message"));
         try {
             if(!appPreferences.getPhoneMode()) {
                 handleMessage(remoteMessage.getData().get("message"));
@@ -29,7 +31,7 @@ public class FireBaseMessagingReciever extends FirebaseMessagingService{
         JSONObject object = new JSONObject(message);
         switch (object.getString("type")){
             case "call" :
-                Intent intent = new Intent(this, FakeStatusBarService.class);
+                Intent intent = new Intent(this, CallActivity.class);
                 startActivity(intent);
                 break;
         }

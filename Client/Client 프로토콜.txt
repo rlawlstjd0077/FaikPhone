@@ -2,5 +2,5 @@ call
 {
     "type" : "call",
     "number" : "010-2222-2222",
-    "name" : "엄마"
+    "name" : "" (NullAble)
 }
