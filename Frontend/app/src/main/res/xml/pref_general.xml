@@ -1,0 +1,23 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="fake_switch"
+        android:summary="@string/pref_description_switch_mode"
+        android:title="@string/pref_title_switch_mode" />
+
+    <EditTextPreference
+        android:title="@string/pref_connection_fake"
+        android:key="fake_connection">
+    </EditTextPreference>
+
+    <Preference
+        android:title="@string/pref_refresh_fake"
+        android:key="fake_refresh">
+    </Preference>
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="fake_statusbar"
+        android:title="@string/pref_statusbar_view" />
+
+</PreferenceScreen>
