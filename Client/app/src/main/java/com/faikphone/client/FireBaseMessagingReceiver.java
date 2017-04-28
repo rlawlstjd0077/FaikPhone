@@ -19,7 +19,7 @@ public class FireBaseMessagingReceiver extends FirebaseMessagingService{
     public void onMessageReceived(RemoteMessage remoteMessage) {
         Log.d("onMessageReceived: ", remoteMessage.getData().get("message"));
         try {
-            if(!appPreferences.getPhoneMode()) {
+            if(!appPreferences.getPhoneMode()) {        // Fake Phone 일 경우
                 handleMessage(remoteMessage.getData().get("message"));
             }
         } catch (JSONException e) {
