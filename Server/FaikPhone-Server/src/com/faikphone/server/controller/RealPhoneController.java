@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -23,32 +24,39 @@ public class RealPhoneController extends HttpServlet{
         System.out.println("서버 접속");
         dao = ChangeDAO.getInstance();
         PrintWriter writer = response.getWriter();
-        System.out.println(request.getParameter("type").toString());
-        switch (request.getParameter("type").toString()){
-            case "register" :
-                writer.println(registerRealPhone(request.getParameter("token")));
-                writer.close();
-                break;
-            case "send_message":
-                writer.println(sendMessage(request.getParameter("token"), request.getParameter("message")));
-                writer.close();
-                break;
-            case "reset_conn":
-                writer.println(resetConnection(request.getParameter("token")));
-                writer.close();
-                break;
-            case "reset_code":
-                writer.println(resetCode(request.getParameter("token")));
-                writer.close();
-                break;
-            case "reset_all":
-                writer.println(resetAll(request.getParameter("token")));
-                writer.close();
-                break;
-            case "test_msg" :
-                MessageManager manager = new MessageManager("e68ZgGUqx84:APA91bHSnVWo-_lZJ6vbDnOoXpGbwvwHgG_QYJZ0s5qQyi5rPWyYQHwyCPhJGrrPbvZ687WnPefYLmm_5I4NeGg7iPTa9yikzaLjnFLcbDBWhqoGoR7DCcDH2sg5CVuhuUwBMVSDWPcP");
-                manager.doRequest("Test");
+        String type = request.getParameter("type").toString();
+        System.out.println(type);
+        if(type != null) {
+            switch (type) {
+                case "register":
+                    writer.write(registerRealPhone(request.getParameter("token")));
+                    break;
+                case "send_message":
+                    writer.write(sendMessage(request.getParameter("token"), request.getParameter("message")));
+                    break;
+                case "reset_conn":
+                    writer.write(resetConnection(request.getParameter("token")));
+                    break;
+                case "reset_code":
+                    writer.write(resetCode(request.getParameter("token")));
+                    break;
+                case "reset_all":
+                    writer.write(resetAll(request.getParameter("token")));
+                    break;
+                case "test_msg":
+                    MessageManager manager = new MessageManager("e68ZgGUqx84:APA91bHSnVWo-_lZJ6vbDnOoXpGbwvwHgG_QYJZ0s5qQyi5rPWyYQHwyCPhJGrrPbvZ687WnPefYLmm_5I4NeGg7iPTa9yikzaLjnFLcbDBWhqoGoR7DCcDH2sg5CVuhuUwBMVSDWPcP");
+                    manager.doRequest("Test");
+                    break;
+                default:
+                    System.out.println("Invalid Request");
+                    writer.println("Invalid Request");
+            }
+        }else{
+            System.out.println("Invalied Request");
+            writer.println("Invalid Request");
         }
+        writer.flush();
+        writer.close();
     }
 
     private String registerRealPhone(String token){

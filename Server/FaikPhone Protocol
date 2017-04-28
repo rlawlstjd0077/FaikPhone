@@ -7,8 +7,9 @@ register
 }
 register response (성공시)
 {
-  "type" : "success",
-  "code" : "dasdasdas1312d"
+  "type" : "register_response",
+  "state" : true,
+  "message" : "dasdasdas1312d"
 }
 send message (raelphone)
 {
@@ -28,17 +29,15 @@ reset code
 }
 reset code response (성공시)
 {
-    "type" : "success",
-    "code" : "dasdasdas1312d"
+    "type" : "reset_code_response",
+    "state" : true,
+    "message" : "dasdasdas1312d"
 }
 reset all
 {
     "type" : "reset_all",
     "token" : "Dasdsadasd"
 }
-
-
-
 ================== Fake Phone =======================
 register
 {
@@ -61,18 +60,4 @@ reset all
 {
     "type" : "reset_all",
     "token" : "Dasdsadasd"
-}
-
-
-success code (모든 성공 응답)
-{
-  "type" : "xxxx_response",
-  "state" : true,
-  "message" : "Success"
-}
-error code (모든 에러 응답)
-{
-  "type" : "xxxx_response",
-  "state" : false,
-  "message" : "Failed"
 }
