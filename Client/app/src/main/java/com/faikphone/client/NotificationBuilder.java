@@ -1,11 +1,10 @@
-package com.faker.notificationapplication;
+package com.faikphone.client;
 
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.NotificationCompat;
 
 /**
  * Created by boxfox on 2017-04-20.
