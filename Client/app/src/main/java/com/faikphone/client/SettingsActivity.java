@@ -1,5 +1,4 @@
-package com.yunho.fakephone;
-
+package com.faikphone.client;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -191,9 +190,9 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
 
         private void RefreshConnection(){
             if(isFake){
-
+                // TODO: 연결 끊기 작업 수행
             }else{
-
+                // TODO: 인증 코드 재발급 작업 수행
             }
         }
     }

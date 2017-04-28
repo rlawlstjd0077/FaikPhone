@@ -45,6 +45,7 @@ public class ChangeDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, token);
             preparedStatement.setString(2, code);
+            preparedStatement.execute();
         } catch (SQLException e) {
             return false;
         }
@@ -170,7 +171,7 @@ public class ChangeDAO {
      * @throws SQLException
      */
     public ResultSet selectResultSetFromRealToken(String realToken) throws SQLException {
-        String sql = "select * from conn where realtoken = " + realToken;
+        String sql = "select * from conn where realtoken = '" + realToken + "'";
         Statement statement = connection.createStatement();
         ResultSet rs = statement.executeQuery(sql);
         rs.next();
