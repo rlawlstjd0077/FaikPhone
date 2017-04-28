@@ -1,4 +1,4 @@
-package com.yunho.fakephone;
+package com.faikphone.client;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
