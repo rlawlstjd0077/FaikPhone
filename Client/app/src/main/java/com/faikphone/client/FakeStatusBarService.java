@@ -12,6 +12,7 @@ import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -38,7 +39,7 @@ public class FakeStatusBarService extends Service {
 
         mAppPrefs = new AppPreferences(this);
 
-        if (mAppPrefs.isFakeStatusBarMode()) {
+        if (!mAppPrefs.isFakeStatusBarMode()) {
             mWindowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
 
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
@@ -54,14 +55,21 @@ public class FakeStatusBarService extends Service {
                     WindowManager.LayoutParams.TYPE_SYSTEM_ERROR,
                     // Keeps the button presses from going to the background window
                     WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE |
+                            // pass touch event to real status bar behind this view
+                            WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE |
                             // Enables the notification to receive touch events
                             WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL |
-                            // pass touch event to real status bar behind this view
-                            WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM |
                             // Draws over status bar
                             WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
                     PixelFormat.TRANSLUCENT);
             params.gravity = Gravity.TOP | Gravity.CENTER;
+
+            mView.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    return false;
+                }
+            });
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 if (Settings.canDrawOverlays(this)) {
