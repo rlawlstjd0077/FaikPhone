@@ -14,12 +14,12 @@ public class NotificationBuilder {
     public static final int TYPE_SMS = 1;
     public static final int TYPE_MISSED_CALL = 2;
 
-    public static void missedCall(Context context, String name, String phone){
-        build(context, R.drawable.missed_call, "부재중 전화", name+" "+phone );
+    public static void missedCall(Context context, String name, String phone) {
+        build(context, R.drawable.missed_call, "부재중 전화", name + " " + phone);
     }
 
-    public static void sms(Context context, String name, String content){
-        build(context, R.drawable.sms, name, content );
+    public static void sms(Context context, String name, String content) {
+        build(context, R.drawable.sms, name, content);
     }
 
     public static void build(Context context, int icon, String title, String content) {
@@ -31,7 +31,8 @@ public class NotificationBuilder {
         mBuilder.setTicker("TestAAA");
         mBuilder.setWhen(System.currentTimeMillis());
         mBuilder.setNumber(10);
-        mBuilder.setContentTitle(title);;
+        mBuilder.setContentTitle(title);
+        ;
         mBuilder.setContentText(content);
         mBuilder.setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
         mBuilder.setContentIntent(pendingIntent);
