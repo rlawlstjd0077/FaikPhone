@@ -13,7 +13,7 @@ public class AppPreferences {
     private SharedPreferences.Editor editor;
     private Context context;
 
-    public static final String KEY_PHONE_MODE = "phoneMode";
+    public static final String KEY_PHONE_MODE = "phoneMode";    // true: 공기계, false: 본 핸드폰
     public static final String KEY_AUTH_CODE = "authCode";
     public static final String KEY_FAKE_STATUS_BAR_MODE = "fakeStatusBarMode";
 
@@ -31,6 +31,7 @@ public class AppPreferences {
         editor.putBoolean(KEY_PHONE_MODE, state);
         editor.commit();
     }
+
 
     public String getKeyCode(){
         return sharedPreferences.getString(KEY_AUTH_CODE, null);

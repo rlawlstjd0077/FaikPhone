@@ -29,6 +29,7 @@ import android.view.View;
 import java.util.List;
 
 public  class SettingsActivity extends AppCompatPreferenceActivity {
+
     /**
      * Helper method to determine if the device has an extra-large screen. For
      * example, 10" tablets are extra-large.
@@ -76,6 +77,8 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class GeneralPreferenceFragment extends PreferenceFragment {
 
+        private AppPreferences mAppPrefs;
+
         // fakeMode : true is fake mode, false is real mode.
         public static boolean isFake;
 
@@ -92,11 +95,13 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+            mAppPrefs = new AppPreferences(getActivity());
             addPreferencesFromResource(R.xml.pref_general);
             setHasOptionsMenu(true);
 
             switchModeReference = (SwitchPreference) findPreference("fake_switch");
             switchModeReference.setOnPreferenceChangeListener(fakeSwitchChangeListener);
+            switchModeReference.setChecked(mAppPrefs.getPhoneMode());
 
             connectionPreference = (EditTextPreference) findPreference("fake_connection");
             connectionPreference.setOnPreferenceClickListener(connectionClickListener);
@@ -105,10 +110,9 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
             refreshPreference.setOnPreferenceClickListener(refreshClickListener);
 
             changeBarPreference = (SwitchPreference) findPreference("fake_statusbar");
+            changeBarPreference.setOnPreferenceChangeListener(changeBarChangeListener);
+            changeBarPreference.setChecked(mAppPrefs.isFakeStatusBarMode());
 
-            // TODO: 설정 파일에서 불러올 수 있도록 하기.
-            isFake = switchModeReference.isChecked();
-            switchModeReference.setChecked(isFake);
             ChangePreferences();
         }
 
@@ -129,8 +133,10 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
 
                 // if(job is done){
                 isFake = (boolean) newValue;
+                mAppPrefs.setPhoneMode(isFake);
                 ChangePreferences();
                 // }
+                getActivity().sendBroadcast(new Intent(getString(R.string.preferences_changed_broadcast)));
 
                 return true;
             }
@@ -169,6 +175,16 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
                     connectionPreference.setDialogTitle(R.string.pref_connection_dialog_real);
                     // TODO: 인증코드 불러오는 로직 작성하기
                 }
+
+                return true;
+            }
+        };
+
+        private Preference.OnPreferenceChangeListener changeBarChangeListener = new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                mAppPrefs.setFakeStatusBarMode((boolean) newValue);
+                getActivity().sendBroadcast(new Intent(getString(R.string.preferences_changed_broadcast)));
 
                 return true;
             }
