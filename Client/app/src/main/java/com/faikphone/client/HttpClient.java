@@ -28,7 +28,7 @@ public class HttpClient {
         client = new OkHttpClient();
         this.state = state;
         logger = Logger.getInstance();
-        resHandler = new ResponseHandler();
+//        resHandler = new ResponseHandler();
     }
 
     public void doRegister(String token) {

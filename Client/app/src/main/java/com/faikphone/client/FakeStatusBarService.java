@@ -51,7 +51,7 @@ public class FakeStatusBarService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (mFakeStatusBar != null) mWindowManager.removeViewImmediate(mFakeStatusBar);
+        if (mFakeStatusBar != null && mFakeStatusBar.isShown()) mWindowManager.removeViewImmediate(mFakeStatusBar);
         if (mTimeChangedReceiver != null) {
             try {
                 unregisterReceiver(mTimeChangedReceiver);
@@ -111,7 +111,7 @@ public class FakeStatusBarService extends Service {
     }
 
     private void hideFakeStatusBar() {
-        if (mFakeStatusBar != null) mWindowManager.removeViewImmediate(mFakeStatusBar);
+        if (mFakeStatusBar != null && mFakeStatusBar.isShown()) mWindowManager.removeViewImmediate(mFakeStatusBar);
     }
 
     private void setCurrentTime() {
@@ -134,7 +134,7 @@ public class FakeStatusBarService extends Service {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (intent.getAction().equals(getString(R.string.preferences_changed_broadcast))) {
-                if (mAppPrefs.isFakeStatusBarMode()) {
+                if (mAppPrefs.getPhoneMode() && mAppPrefs.isFakeStatusBarMode()) {
                     showFakeStatusBar();
                 } else {
                     hideFakeStatusBar();

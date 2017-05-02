@@ -132,10 +132,11 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
                 // TODO: 공기계 -> 본 핸드폰, 또는 그 반대 모드로 넘어갈 때 이전의 기기와의 연결을 끊기
 
                 // if(job is done){
-                mAppPrefs.setPhoneMode((boolean) newValue);
+                isFake = (boolean) newValue;
+                mAppPrefs.setPhoneMode(isFake);
                 ChangePreferences();
                 // }
-//                getActivity().sendBroadcast(new Intent(getString(R.string.preferences_changed_broadcast)));
+                getActivity().sendBroadcast(new Intent(getString(R.string.preferences_changed_broadcast)));
 
                 return true;
             }
