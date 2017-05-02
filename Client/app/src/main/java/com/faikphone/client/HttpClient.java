@@ -1,6 +1,8 @@
 package com.faikphone.client;
 
 
+import android.content.Context;
+
 import com.faikphone.client.data.Logger;
 import com.faikphone.client.data.Response;
 import com.faikphone.client.data.ResponseHandler;
@@ -23,12 +25,12 @@ public class HttpClient {
     private Logger logger;
     private ResponseHandler resHandler;
 
-    public HttpClient(boolean state) {
+    public HttpClient(boolean state, Context context) {
         url += state ? "real.do" : "fake.do";
         client = new OkHttpClient();
         this.state = state;
         logger = Logger.getInstance();
-        resHandler = new ResponseHandler();
+        resHandler = new ResponseHandler(context);
     }
 
     public void doRegister(String token) {
