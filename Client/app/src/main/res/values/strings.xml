@@ -30,4 +30,6 @@
 
     <string name="refresh_alert_real">정말로 인증 코드를 재발급받으시겠습니까?</string>
     <string name="refresh_alert_fake">정말로 연결을 끊으시겠습니까?</string>
+    
+    <string name="preferences_changed_broadcast">com.faikphone.client.PREFERENCES_CHANGED_BROADCAST</string>
 </resources>
