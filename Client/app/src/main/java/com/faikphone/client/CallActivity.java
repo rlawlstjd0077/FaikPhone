@@ -13,5 +13,6 @@ public class CallActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         setContentView(R.layout.activity_call);
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
     }
 }

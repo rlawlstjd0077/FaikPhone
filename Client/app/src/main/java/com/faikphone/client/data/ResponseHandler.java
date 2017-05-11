@@ -17,7 +17,7 @@ public class ResponseHandler {
     }
 
     public void handlerResponse(Response response, boolean state){
-        if(state){
+        if(!state){
             switch (response.getType()){
                 case "send_message_response" :
                     if(response.getState()){
@@ -59,26 +59,26 @@ public class ResponseHandler {
             }
         }else{
             //TODO 공기계도 Log를 보여줄 것인지
-//            switch (response.getType()){
-//                case "send_message_response" :
-//                    if(response.getState()){
-//                        logger.handlerResponse("메시지 전송 성공");
-//                    }else{
-//                        logger.handlerResponse("메시지 전송 실패");
-//                    }
-//                    break;
-//                case "register_response":
-//                    if(response.getState()){
-//                        logger.handlerResponse("메시지 전송 성공");
-//                    }else{
-//                        logger.handlerResponse("메시지 전송 실패");
-//                    }
-//                    break;
-//                case "reset_all_response":
-//                    break;
-//                case "reset_conn_response":
-//                    break;
-//            }
+            switch (response.getType()){
+                case "send_message_response" :
+                    if(response.getState()){
+                        logger.write("메시지 전송 성공");
+                    }else{
+                        logger.write("메시지 전송 실패");
+                    }
+                    break;
+                case "register_response":
+                    if(response.getState()){
+                        logger.write("메시지 전송 성공");
+                    }else{
+                        logger.write("메시지 전송 실패");
+                    }
+                    break;
+                case "reset_all_response":
+                    break;
+                case "reset_conn_response":
+                    break;
+            }
         }
     }
 }

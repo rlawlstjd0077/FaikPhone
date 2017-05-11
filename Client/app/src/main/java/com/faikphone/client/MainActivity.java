@@ -9,8 +9,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
     private static final int REQUEST_MANAGE_OVERLAY_PERMISSION = 11;
     private AppPreferences appPreferences;
 
@@ -25,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
         this.appPreferences = FaikPhoneApplication.getAppPreferences();
         if(appPreferences.getPhoneMode()){  //realPhone
-            getSupportActionBar().setTitle("FaikPhone(Real Mode)");
-        }else{  //fakePhone
             getSupportActionBar().setTitle("FaikPhone(Fake Mode)");
+        }else{  //fakePhone
+            getSupportActionBar().setTitle("FaikPhone(Real Mode)");
         }
     }
 
@@ -74,6 +77,17 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }catch(Exception e){
             e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        this.appPreferences = FaikPhoneApplication.getAppPreferences();
+        if(appPreferences.getPhoneMode()){  //realPhone
+            getSupportActionBar().setTitle("FaikPhone(Fake Mode)");
+        }else{  //fakePhone
+            getSupportActionBar().setTitle("FaikPhone(Real Mode)");
         }
     }
 }

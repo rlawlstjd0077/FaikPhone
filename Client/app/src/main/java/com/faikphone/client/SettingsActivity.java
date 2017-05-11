@@ -4,32 +4,29 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.media.Ringtone;
-import android.media.RingtoneManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
-import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.PreferenceActivity;
+import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
-import android.support.v7.app.ActionBar;
+import android.support.annotation.RequiresApi;
 import android.preference.PreferenceFragment;
-import android.preference.PreferenceManager;
-import android.preference.RingtonePreference;
 import android.support.v7.app.AlertDialog;
-import android.text.TextUtils;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.Toast;
+
+import com.faikphone.client.network.FakeHttpClient;
+import com.faikphone.client.network.HttpClient;
+import com.faikphone.client.network.RealHttpClient;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import java.util.List;
 
 public  class SettingsActivity extends AppCompatPreferenceActivity {
-
     /**
      * Helper method to determine if the device has an extra-large screen. For
      * example, 10" tablets are extra-large.
@@ -76,26 +73,33 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class GeneralPreferenceFragment extends PreferenceFragment {
+        private HttpClient realHttpClient;
 
         private AppPreferences mAppPrefs;
 
         // fakeMode : true is fake mode, false is real mode.
         public static boolean isFake;
 
+        PreferenceScreen prefer_screen;
+
         SwitchPreference switchModeReference;
 
-        // fake is try to connect, real is view code.
-        EditTextPreference connectionPreference;
-        // fake is disconnect, real is same too
-        Preference refreshPreference;
-        //
-        SwitchPreference changeBarPreference;
+        EditTextPreference fakeConnectionPreference;
 
+        Preference fakeRefreshPreference;
 
+        SwitchPreference fakeChangeBarPreference;
+
+        Preference realCodeViewPreference;
+
+        Preference realCodeRefreshPreference;
+
+        @RequiresApi(api = Build.VERSION_CODES.M)
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             mAppPrefs = new AppPreferences(getActivity());
+            realHttpClient = new RealHttpClient(getActivity());
             addPreferencesFromResource(R.xml.pref_general);
             setHasOptionsMenu(true);
 
@@ -103,15 +107,26 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
             switchModeReference.setOnPreferenceChangeListener(fakeSwitchChangeListener);
             switchModeReference.setChecked(mAppPrefs.getPhoneMode());
 
-            connectionPreference = (EditTextPreference) findPreference("fake_connection");
-            connectionPreference.setOnPreferenceClickListener(connectionClickListener);
+            prefer_screen = (PreferenceScreen) findPreference("prefer_screen");
 
-            refreshPreference = (Preference) findPreference("fake_refresh");
-            refreshPreference.setOnPreferenceClickListener(refreshClickListener);
+            // Fake Preferences
+            fakeConnectionPreference = (EditTextPreference)findPreference("fake_connection");
+            fakeConnectionPreference.setOnPreferenceChangeListener(fakeConnectionChangeListener);
 
-            changeBarPreference = (SwitchPreference) findPreference("fake_statusbar");
-            changeBarPreference.setOnPreferenceChangeListener(changeBarChangeListener);
-            changeBarPreference.setChecked(mAppPrefs.isFakeStatusBarMode());
+            fakeRefreshPreference = findPreference("fake_refresh");
+            fakeRefreshPreference.setOnPreferenceClickListener(fakeRefreshClickListener);
+
+            fakeChangeBarPreference = (SwitchPreference) findPreference("fake_statusbar");
+            fakeChangeBarPreference.setOnPreferenceChangeListener(fakeChangeBarChangeListener);
+            fakeChangeBarPreference.setChecked(mAppPrefs.isFakeStatusBarMode());
+
+            //Real Preferences
+
+            realCodeViewPreference = findPreference("real_code_view");
+            realCodeViewPreference.setOnPreferenceClickListener(realCodeVIewListener);
+
+            realCodeRefreshPreference = findPreference("real_code_refresh");
+            realCodeRefreshPreference.setOnPreferenceClickListener(realCodeRefreshListener);
 
             ChangePreferences();
         }
@@ -142,15 +157,10 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
             }
         };
 
-        private Preference.OnPreferenceClickListener refreshClickListener = new Preference.OnPreferenceClickListener() {
+        private Preference.OnPreferenceClickListener fakeRefreshClickListener = new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                String message;
-                if(isFake){
-                    message = getResources().getString(R.string.refresh_alert_fake);
-                }else{
-                    message = getResources().getString(R.string.refresh_alert_real);
-                }
+                String message = getResources().getString(R.string.refresh_alert_fake);
 
                 new AlertDialog.Builder(getActivity()).setMessage(message)
                         .setPositiveButton("확인", new DialogInterface.OnClickListener() {
@@ -161,46 +171,97 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
                         })
                         .setNegativeButton("취소", null)
                         .show();
-
                 return true;
             }
         };
-
-        private EditTextPreference.OnPreferenceClickListener connectionClickListener = new EditTextPreference.OnPreferenceClickListener() {
+        private EditTextPreference.OnPreferenceChangeListener fakeConnectionChangeListener = new Preference.OnPreferenceChangeListener() {
             @Override
-            public boolean onPreferenceClick(Preference preference) {
-                if(isFake){
-                    connectionPreference.setDialogTitle(R.string.pref_connection_dialog_fake);
-                }else{
-                    connectionPreference.setDialogTitle(R.string.pref_connection_dialog_real);
-                    // TODO: 인증코드 불러오는 로직 작성하기
-                }
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                fakeConnectionPreference.setDialogTitle(R.string.pref_connection_dialog_fake);
+                realHttpClient.doRegister(FirebaseInstanceId.getInstance().getToken(), "R2T1R9H47VRN");
 
                 return true;
             }
         };
 
-        private Preference.OnPreferenceChangeListener changeBarChangeListener = new Preference.OnPreferenceChangeListener() {
+        private Preference.OnPreferenceChangeListener fakeChangeBarChangeListener = new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
                 mAppPrefs.setFakeStatusBarMode((boolean) newValue);
                 getActivity().sendBroadcast(new Intent(getString(R.string.preferences_changed_broadcast)));
+                return true;
+            }
+        };
 
+        private Preference.OnPreferenceClickListener realCodeVIewListener = new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                String code = null;
+                if((code = mAppPrefs.getKeyCode()) == null){
+                    realHttpClient.doRegister(FirebaseInstanceId.getInstance().getToken());
+                    code = mAppPrefs.getKeyCode();
+                }
+                if(code==null){
+                    Toast.makeText(getActivity(), "서버 오류 발생", Toast.LENGTH_SHORT).show();
+                }
+
+                new AlertDialog.Builder(getActivity()).setMessage(code)
+                        .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                RefreshConnection();
+                            }
+                        })
+                        .show();
+                return true;
+            }
+        };
+
+        private Preference.OnPreferenceClickListener realCodeRefreshListener = new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                String code = null;
+                if((code = mAppPrefs.getKeyCode()) == null){
+                    Toast.makeText(getActivity(), "등록되지 않은 기기 입니다. 등록해주세요", Toast.LENGTH_SHORT).show();
+                    return true;
+                }
+
+                realHttpClient.doResetCode(FirebaseInstanceId.getInstance().getToken());
+                code = mAppPrefs.getKeyCode();
+
+                if(code==null){
+                    Toast.makeText(getActivity(), "서버 오류 발생", Toast.LENGTH_SHORT).show();
+                }
+
+                new AlertDialog.Builder(getActivity()).setMessage(code)
+                        .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                RefreshConnection();
+                            }
+                        })
+                        .setNegativeButton("취소", null)
+                        .show();
                 return true;
             }
         };
 
         private void ChangePreferences(){
             if(isFake){
-                connectionPreference.setTitle(R.string.pref_connection_fake);
-                connectionPreference.setDialogTitle(R.string.pref_connection_dialog_fake);
-                refreshPreference.setTitle(R.string.pref_refresh_fake);
-                changeBarPreference.setEnabled(true);
+                prefer_screen.removePreference(realCodeViewPreference);
+                prefer_screen.removePreference(realCodeRefreshPreference);
+                prefer_screen.addPreference(fakeConnectionPreference);
+                prefer_screen.addPreference(fakeRefreshPreference);
+                prefer_screen.addPreference(fakeChangeBarPreference);
+                realHttpClient = new FakeHttpClient(getActivity());
+
             }else{
-                connectionPreference.setTitle(R.string.pref_connection_real);
-                connectionPreference.setDialogTitle(R.string.pref_connection_dialog_real);
-                refreshPreference.setTitle(R.string.pref_refresh_real);
-                changeBarPreference.setEnabled(false);
+                prefer_screen.removePreference(fakeConnectionPreference);
+                prefer_screen.removePreference(fakeRefreshPreference);
+                prefer_screen.removePreference(fakeChangeBarPreference);
+                prefer_screen.addPreference(realCodeViewPreference);
+                prefer_screen.addPreference(realCodeRefreshPreference);
+                realHttpClient = new FakeHttpClient(getActivity());
             }
         }
 
