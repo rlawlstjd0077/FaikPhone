@@ -1,4 +1,4 @@
-package com.faikphone.client;
+package com.faikphone.client.activity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

@@ -2,7 +2,7 @@ package com.faikphone.client.data;
 
 import android.content.Context;
 
-import com.faikphone.client.AppPreferences;
+import com.faikphone.client.utils.AppPreferences;
 
 /**
  * Created by dsm_025 on 2017-04-28.

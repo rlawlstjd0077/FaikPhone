@@ -1,4 +1,4 @@
-package com.faikphone.client;
+package com.faikphone.client.activity;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -14,11 +14,11 @@ import android.preference.SwitchPreference;
 import android.support.annotation.RequiresApi;
 import android.preference.PreferenceFragment;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.faikphone.client.utils.AppPreferences;
+import com.faikphone.client.R;
 import com.faikphone.client.network.FakeHttpClient;
 import com.faikphone.client.network.HttpClient;
 import com.faikphone.client.network.RealHttpClient;
