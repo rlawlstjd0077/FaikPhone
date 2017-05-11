@@ -23,7 +23,7 @@
     <string name="pref_connection_dialog_real">인증 코드 보기</string>
     <string name="pref_connection_dialog_fake">코드 입력</string>
 
-    <string name="pref_refresh_real">인증 코드 재발급</string>
+    <string name="pref_code_refresh_real">인증 코드 재발급</string>
     <string name="pref_refresh_fake">연결 끊기</string>
 
     <string name="pref_statusbar_view">상단바 위장 적용 여부</string>

@@ -17,14 +17,17 @@ public class FireBaseMessagingReceiver extends FirebaseMessagingService{
     AppPreferences appPreferences = FaikPhoneApplication.getAppPreferences();
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        Log.d("onMessageReceived: ", remoteMessage.getData().get("message"));
-        try {
-            if(!appPreferences.getPhoneMode()) {        // Fake Phone 일 경우
-                handleMessage(remoteMessage.getData().get("message"));
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        Intent intent = new Intent(this, CallActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+//        Log.d("onMessageReceived: ", remoteMessage.getData().get("message"));
+//        try {
+//            if(!appPreferences.getPhoneMode()) {        // Fake Phone 일 경우
+//                handleMessage(remoteMessage.getData().get("message"));
+//            }
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
     }
 
     public void handleMessage(String message) throws JSONException {

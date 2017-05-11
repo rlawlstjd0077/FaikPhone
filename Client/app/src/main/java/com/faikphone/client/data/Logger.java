@@ -66,17 +66,17 @@ public class Logger {
         writer.close();
     }
 
-    public void read() {
+    public String read() {
         try {
             BufferedReader read = new BufferedReader(new FileReader(logFile));
-            String str;
-            while((str = read.readLine()) != null) {
-                System.out.println(str);
+            String result = null, tmp;
+            while((tmp = read.readLine()) != null) {
+                result += tmp;
             }
+            return result;
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();
         }
+        return null;
     }
 }
