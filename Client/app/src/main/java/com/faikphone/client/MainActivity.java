@@ -1,6 +1,7 @@
 package com.faikphone.client;
 
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Build;
 import android.preference.PreferenceActivity;
 import android.provider.Settings;
@@ -24,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         this.appPreferences = FaikPhoneApplication.getAppPreferences();
-        if(appPreferences.getPhoneMode()){  //realPhone
-            getSupportActionBar().setTitle("FaikPhone(Real Mode)");
-        }else{  //fakePhone
+        if(appPreferences.getPhoneMode()){  //fakePhone
             getSupportActionBar().setTitle("FaikPhone(Fake Mode)");
+        }else{  //realPhone
+            getSupportActionBar().setTitle("FaikPhone(Real Mode)");
         }
     }
 

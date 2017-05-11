@@ -78,7 +78,7 @@ public class FakeStatusBarService extends Service {
 
         WindowManager.LayoutParams params = new WindowManager.LayoutParams(
                 WindowManager.LayoutParams.MATCH_PARENT,
-                (int) DensityConverter.dpToPx(this, 28),
+                (int) DensityConverter.dpToPx(this, 26),
                 // Allows the view to be on top of the StatusBar
                 WindowManager.LayoutParams.TYPE_SYSTEM_ERROR,
                 // Keeps the button presses from going to the background window
