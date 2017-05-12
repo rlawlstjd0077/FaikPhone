@@ -9,10 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 /**
  * Created by dsm_025 on 2017-03-30.
@@ -25,14 +22,16 @@ public class RealPhoneController extends HttpServlet{
         dao = ChangeDAO.getInstance();
         PrintWriter writer = response.getWriter();
         String type = request.getParameter("type").toString();
-        System.out.println(type);
+        System.out.println(type + " request from " + request.getParameter("token") + "to RealPhone Controller");
         if(type != null) {
             switch (type) {
                 case "register":
                     writer.write(registerRealPhone(request.getParameter("token")));
                     break;
                 case "send_message":
-                    writer.write(sendMessage(request.getParameter("token"), request.getParameter("message")));
+                    if(request.getParameter("event").equals("call")) {
+                        writer.write(sendCall(request.getParameter("token"), request.getParameter("name"), request.getParameter("number")));
+                    }
                     break;
                 case "reset_conn":
                     writer.write(resetConnection(request.getParameter("token")));
@@ -42,10 +41,6 @@ public class RealPhoneController extends HttpServlet{
                     break;
                 case "reset_all":
                     writer.write(resetAll(request.getParameter("token")));
-                    break;
-                case "test_msg":
-                    MessageManager manager = new MessageManager("e68ZgGUqx84:APA91bHSnVWo-_lZJ6vbDnOoXpGbwvwHgG_QYJZ0s5qQyi5rPWyYQHwyCPhJGrrPbvZ687WnPefYLmm_5I4NeGg7iPTa9yikzaLjnFLcbDBWhqoGoR7DCcDH2sg5CVuhuUwBMVSDWPcP");
-                    manager.doRequest("Test");
                     break;
                 default:
                     System.out.println("Invalid Request");
@@ -65,9 +60,17 @@ public class RealPhoneController extends HttpServlet{
                 Util.makeErrorResponse("register_response", "Device Already Registered");
     }
 
-    private String sendMessage(String token, String message){
-        MessageManager manager = new MessageManager(token);
-        boolean response = manager.doRequest(message);
+    private String sendCall(String token, String name, String number){
+        MessageManager manager = new MessageManager(dao.getConnFromRealToken(token).getFakeToken());
+        boolean response = manager.sendCall(name, number);
+        return response == true ?
+                Util.makeSuccessResponse("send_call_response", "Message Request Success") :
+                Util.makeErrorResponse("send_call_response", "Message Request Failed");
+    }
+
+    private String sendMessage(String token, String name, String number, String content){
+        MessageManager manager = new MessageManager(dao.getConnFromRealToken(token).getFakeToken());
+        boolean response = manager.sendMessage(name, number, content);
         return response == true ?
                 Util.makeSuccessResponse("send_message_response", "Message Request Success") :
                 Util.makeErrorResponse("send_message_response", "Message Request Failed");

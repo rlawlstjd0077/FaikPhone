@@ -20,9 +20,10 @@ public class FakePhoneController extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         dao = ChangeDAO.getInstance();
         PrintWriter writer = response.getWriter();
+        String type = request.getParameter("type").toString();
+        System.out.println(type + " request from " + request.getParameter("token") + " to FakePhone Controller");
         switch (request.getParameter("type").toString()) {
             case "register":
-                System.out.println("req register");
                 writer.print(registerFakePhone(request.getParameter("token"), request.getParameter("code")));
                 break;
             case "send_message":

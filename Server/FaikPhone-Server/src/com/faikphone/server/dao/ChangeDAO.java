@@ -22,7 +22,7 @@ public class ChangeDAO {
         System.out.println("DB 연결 성공");
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/auth", "root", "4112665aA");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/auth?useSSL=true", "root", "4112665aA");
             st = connection.createStatement();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -60,11 +60,11 @@ public class ChangeDAO {
      * @return
      */
     public boolean insertFaikPhoneToken(String token, String code) {
-        if (isTokenRegister(token) == false) {
+        if (isTokenRegister(code) == false) {
             return false;
         }
 
-        String sql = "update conn set faketoken = " + token + " where code = " + code;
+        String sql = "update conn set faketoken = '" + token + "' where code = '" + code + "'";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.execute();

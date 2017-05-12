@@ -16,14 +16,24 @@ public class MessageManager {
     private final String SERVER_KEY = "key=AAAAWGtqijs:APA91bEj253aBLOCV3hFtYl7umYBJlmDryas8xh3yhR-SPH8uXepDQwZKAlRJqw9hmuW26h4bKq-sWKN_S0ZzkVRo4FVB52ZWJtZjMRtfm4XkqGt-pTZGrjSudASFUJ7N0p6Y9EjZoU9";
     private String token;
 
+    /**
+     * 상대방의 Token
+     * @param token
+     */
     public MessageManager(String token){
         this.token = token;
     }
 
-    public boolean doRequest(String message){
-        final OkHttpClient client = new OkHttpClient();
-        JSONObject bodyData = createBodyData(message);
+    public boolean sendCall(String name, String number){
+        return doRequest(createBodyData(name, number, "message"));
+    }
 
+    public boolean sendMessage(String name, String number, String content){
+        return doRequest(createBodyData(name, number,content, "message"));
+    }
+
+    private boolean doRequest(JSONObject bodyData){
+        final OkHttpClient client = new OkHttpClient();
         RequestBody body = RequestBody.create(JSON, bodyData.toString());
         final Request request = new Request.Builder()
                 .url(URL)
@@ -39,12 +49,32 @@ public class MessageManager {
         return true;
     }
 
-    public JSONObject createBodyData(String message){
+    private JSONObject createBodyData(String name, String number, String type){
         JSONObject object = new JSONObject();
         try {
             JSONObject data = new JSONObject();
             object.put("to", token);
-            data.put("message",  message);
+            data.put("type", type);
+            data.put("name",  name);
+            data.put("number", number);
+            data.put("score","5x1");
+            data.put("time", "9:50");
+            object.put("data", data);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return object;
+    }
+
+    private JSONObject createBodyData(String name, String number, String content, String type){
+        JSONObject object = new JSONObject();
+        try {
+            JSONObject data = new JSONObject();
+            object.put("to", token);
+            data.put("type", type);
+            data.put("name",  name);
+            data.put("number", number);
+            data.put("content", content);
             data.put("score","5x1");
             data.put("time", "9:50");
             object.put("data", data);
