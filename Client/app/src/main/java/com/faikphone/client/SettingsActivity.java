@@ -14,8 +14,6 @@ import android.preference.SwitchPreference;
 import android.support.annotation.RequiresApi;
 import android.preference.PreferenceFragment;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -73,7 +71,7 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class GeneralPreferenceFragment extends PreferenceFragment {
-        private HttpClient realHttpClient;
+        private HttpClient httpClient;
 
         private AppPreferences mAppPrefs;
 
@@ -99,7 +97,7 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             mAppPrefs = new AppPreferences(getActivity());
-            realHttpClient = new RealHttpClient(getActivity());
+            httpClient = new RealHttpClient(getActivity());
             addPreferencesFromResource(R.xml.pref_general);
             setHasOptionsMenu(true);
 
@@ -178,8 +176,8 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
                 fakeConnectionPreference.setDialogTitle(R.string.pref_connection_dialog_fake);
-                realHttpClient.doRegister(FirebaseInstanceId.getInstance().getToken(), "R2T1R9H47VRN");
-
+                httpClient.doRegister(FirebaseInstanceId.getInstance().getToken(), "R2T1R9H47VRN");
+                Toast.makeText(getActivity(), "연결에 성공했습니다.", Toast.LENGTH_SHORT).show();
                 return true;
             }
         };
@@ -198,7 +196,7 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
             public boolean onPreferenceClick(Preference preference) {
                 String code = null;
                 if((code = mAppPrefs.getKeyCode()) == null){
-                    realHttpClient.doRegister(FirebaseInstanceId.getInstance().getToken());
+                    httpClient.doRegister(FirebaseInstanceId.getInstance().getToken());
                     code = mAppPrefs.getKeyCode();
                 }
                 if(code==null){
@@ -226,7 +224,7 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
                     return true;
                 }
 
-                realHttpClient.doResetCode(FirebaseInstanceId.getInstance().getToken());
+                httpClient.doResetCode(FirebaseInstanceId.getInstance().getToken());
                 code = mAppPrefs.getKeyCode();
 
                 if(code==null){
@@ -253,7 +251,7 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
                 prefer_screen.addPreference(fakeConnectionPreference);
                 prefer_screen.addPreference(fakeRefreshPreference);
                 prefer_screen.addPreference(fakeChangeBarPreference);
-                realHttpClient = new FakeHttpClient(getActivity());
+                httpClient = new FakeHttpClient(getActivity());
 
             }else{
                 prefer_screen.removePreference(fakeConnectionPreference);
@@ -261,7 +259,7 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
                 prefer_screen.removePreference(fakeChangeBarPreference);
                 prefer_screen.addPreference(realCodeViewPreference);
                 prefer_screen.addPreference(realCodeRefreshPreference);
-                realHttpClient = new FakeHttpClient(getActivity());
+                httpClient = new RealHttpClient(getActivity());
             }
         }
 

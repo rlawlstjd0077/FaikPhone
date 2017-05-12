@@ -39,7 +39,7 @@ public abstract class HttpClient {
                 .build();
     }
 
-    public void doRequest(Request request) {
+    public void doRequest(Request request, boolean state) {
         requester = new Requester(client, request);
         try {
             Thread thread = new Thread(requester);
@@ -49,7 +49,7 @@ public abstract class HttpClient {
             e.printStackTrace();
         }
         Response response = new Gson().fromJson(requester.getResponseMessage(), Response.class);
-        resHandler.handlerResponse(response, true);
+        resHandler.handlerResponse(response, state);
     }
 
     public abstract HttpUrl.Builder createBuilder(String type, String token);

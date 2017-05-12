@@ -16,7 +16,7 @@ import okhttp3.Request;
  */
 
 public class FakeHttpClient extends HttpClient{
-    private String url = "http://192.168.43.95:8999/fake.do";
+    private String url = "http://192.168.137.181:8999/fake.do";
 
     public FakeHttpClient(Context context){
         client = new OkHttpClient();
@@ -28,7 +28,7 @@ public class FakeHttpClient extends HttpClient{
         HttpUrl.Builder urlBuilder = createBuilder("register", token);
         urlBuilder.addQueryParameter("code", code);
         final Request request = getRequest(urlBuilder);
-        doRequest(request);
+        doRequest(request, true);
     }
 
     @Override

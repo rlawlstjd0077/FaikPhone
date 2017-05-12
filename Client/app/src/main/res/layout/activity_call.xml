@@ -31,18 +31,18 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="엄마"
             android:textColor="#FFFFFF"
             android:textSize="34sp" />
 
         <TextView
+            android:id="@+id/tv_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/name"
+            android:layout_below="@id/tv_name"
             android:layout_centerInParent="true"
             android:text="휴대전화 010 - 2222 - 2222"
             android:textColor="#FFFFFF" />

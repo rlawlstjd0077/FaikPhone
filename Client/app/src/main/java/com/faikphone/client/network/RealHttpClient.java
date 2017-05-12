@@ -19,10 +19,7 @@ import okhttp3.Request;
  */
 
 public class RealHttpClient extends HttpClient{
-    private String url = "http://192.168.43.95:8999/real.do";
-    private final OkHttpClient client;
-    private Requester requester;
-    private ResponseHandler resHandler;
+    private String url = "http://192.168.137.181:8999/real.do";
 
     public RealHttpClient(Context context) {
         client = new OkHttpClient();
@@ -37,7 +34,7 @@ public class RealHttpClient extends HttpClient{
     public void doRegister(String token) {
         HttpUrl.Builder urlBuilder = createBuilder("register", token);
         final Request request = getRequest(urlBuilder);
-        doRequest(request);
+        doRequest(request, false);
     }
 
     @Override
@@ -45,6 +42,7 @@ public class RealHttpClient extends HttpClient{
         HttpUrl.Builder urlBuilder = createBuilder("send_message", token);
         urlBuilder.addQueryParameter("message", msg);
         final Request request = getRequest(urlBuilder);
+        doRequest(request, false);
         return null;
     }
 
@@ -59,7 +57,7 @@ public class RealHttpClient extends HttpClient{
     public void doResetCode(String token) {
         HttpUrl.Builder urlBuilder = createBuilder("reset_code", token);
         final Request request = getRequest(urlBuilder);
-        doRequest(request);
+        doRequest(request, false);
     }
 
     @Override
