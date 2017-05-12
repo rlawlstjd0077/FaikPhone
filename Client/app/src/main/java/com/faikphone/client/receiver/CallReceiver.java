@@ -1,4 +1,4 @@
-package com.faikphone.client;
+package com.faikphone.client.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
+import com.faikphone.client.network.HttpClient;
+import com.faikphone.client.network.RealHttpClient;
+import com.faikphone.client.utils.AppPreferences;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 import org.json.JSONException;

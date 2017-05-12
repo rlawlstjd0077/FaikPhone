@@ -19,7 +19,7 @@ import okhttp3.Request;
  */
 
 public class RealHttpClient extends HttpClient{
-    private String url = "http://192.168.137.181:8999/real.do";
+    private String url = "http://192.168.137.253:8999/real.do";
 
     public RealHttpClient(Context context) {
         client = new OkHttpClient();

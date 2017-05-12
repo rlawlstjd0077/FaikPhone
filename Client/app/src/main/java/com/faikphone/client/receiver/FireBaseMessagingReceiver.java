@@ -1,6 +1,7 @@
 package com.faikphone.client.receiver;
 
 import android.content.Intent;
+import android.util.Log;
 
 import com.faikphone.client.utils.AppPreferences;
 import com.faikphone.client.activity.CallActivity;

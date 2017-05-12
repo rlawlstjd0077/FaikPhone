@@ -11,6 +11,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.faikphone.client.activity.SettingsActivity;
+import com.faikphone.client.application.FaikPhoneApplication;
+import com.faikphone.client.service.FakeStatusBarService;
+import com.faikphone.client.utils.AppPreferences;
+
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_MANAGE_OVERLAY_PERMISSION = 11;
     private AppPreferences appPreferences;

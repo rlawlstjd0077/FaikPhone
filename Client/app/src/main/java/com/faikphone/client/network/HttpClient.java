@@ -1,5 +1,7 @@
 package com.faikphone.client.network;
 
+import android.util.Log;
+
 import com.faikphone.client.Requester;
 import com.faikphone.client.data.Response;
 import com.faikphone.client.data.ResponseHandler;
@@ -48,6 +50,7 @@ public abstract class HttpClient {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        Log.d("testLog", requester.getResponseMessage());
         Response response = new Gson().fromJson(requester.getResponseMessage(), Response.class);
         resHandler.handlerResponse(response, state);
     }
