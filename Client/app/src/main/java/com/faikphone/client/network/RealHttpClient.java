@@ -2,12 +2,18 @@ package com.faikphone.client.network;
 
 
 import android.content.Context;
+import android.util.Log;
 
 import com.faikphone.client.Requester;
 import com.faikphone.client.data.Logger;
 import com.faikphone.client.data.Response;
 import com.faikphone.client.data.ResponseHandler;
 import com.google.gson.Gson;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Iterator;
 
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
@@ -19,7 +25,7 @@ import okhttp3.Request;
  */
 
 public class RealHttpClient extends HttpClient{
-    private String url = "http://192.168.137.181:8999/real.do";
+    private String url = "http://192.168.137.253:8999/real.do";
 
     public RealHttpClient(Context context) {
         client = new OkHttpClient();
@@ -38,13 +44,20 @@ public class RealHttpClient extends HttpClient{
     }
 
     @Override
-    public String doSendMessage(String msg, String token) {
+    public String doSendMessage(JSONObject msg, String token) throws JSONException {
         HttpUrl.Builder urlBuilder = createBuilder("send_message", token);
-        urlBuilder.addQueryParameter("message", msg);
+        Iterator<String> keys = msg.keys();
+        while (keys.hasNext()) {
+            String key = keys.next();
+            String value = msg.getString(key);
+            urlBuilder.addQueryParameter(key, value);
+        }
         final Request request = getRequest(urlBuilder);
         doRequest(request, false);
         return null;
     }
+
+
 
     @Override
     public String doResetConnection(String token) {
