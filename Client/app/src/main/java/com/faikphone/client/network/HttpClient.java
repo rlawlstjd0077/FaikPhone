@@ -7,6 +7,12 @@ import com.faikphone.client.data.Response;
 import com.faikphone.client.data.ResponseHandler;
 import com.google.gson.Gson;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Iterator;
+import java.util.List;
+
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -24,15 +30,13 @@ public abstract class HttpClient {
     public abstract void doRegister(String token, String code);
     public abstract void doRegister(String token);
 
-    public abstract String doSendMessage(String msg, String token);
+    public abstract String doSendMessage(JSONObject msg, String token) throws JSONException;
 
     public abstract void doResetCode(String token);
 
     public abstract String doResetAll(String token);
 
     public abstract String doResetConnection(String token);
-
-
 
     public Request getRequest(HttpUrl.Builder builder) {
         return new Request.Builder()
@@ -50,7 +54,6 @@ public abstract class HttpClient {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Log.d("testLog", requester.getResponseMessage());
         Response response = new Gson().fromJson(requester.getResponseMessage(), Response.class);
         resHandler.handlerResponse(response, state);
     }

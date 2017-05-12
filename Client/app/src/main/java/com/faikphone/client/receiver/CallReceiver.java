@@ -37,7 +37,7 @@ public class CallReceiver extends BroadcastReceiver {
                     messageJSON.put("type", "call");
                     messageJSON.put("number", phoneNumber);
                     String token = FirebaseInstanceId.getInstance().getToken();
-                    httpClient.doSendMessage(messageJSON.toString(), token);
+                    httpClient.doSendMessage(messageJSON, token);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
