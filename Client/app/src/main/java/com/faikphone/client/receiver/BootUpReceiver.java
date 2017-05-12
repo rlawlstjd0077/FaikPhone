@@ -1,9 +1,10 @@
-package com.faikphone.client;
+package com.faikphone.client.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
+
+import com.faikphone.client.service.FakeStatusBarService;
 
 /**
  * Created by BeINone on 2017-04-14.

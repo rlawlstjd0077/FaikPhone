@@ -1,10 +1,12 @@
-package com.faikphone.client;
+package com.faikphone.client.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.TextViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import com.faikphone.client.R;
 
 /**
  * Created by dsm_025 on 2017-04-18.

@@ -11,11 +11,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.faikphone.client.network.FakeHttpClient;
-import com.faikphone.client.network.HttpClient;
-import com.faikphone.client.network.RealHttpClient;
-import com.google.firebase.iid.FirebaseInstanceId;
-
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_MANAGE_OVERLAY_PERMISSION = 11;
     private AppPreferences appPreferences;
@@ -24,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         if (checkDrawOverlayPermission()) {
             startService(new Intent(this, FakeStatusBarService.class));
@@ -36,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
         }else{  //realPhone
             getSupportActionBar().setTitle("FaikPhone(Real Mode)");
         }
-        HttpClient httpClient = new RealHttpClient(getApplicationContext());
-        httpClient.doSendMessage("das", FirebaseInstanceId.getInstance().getToken());
     }
 
     @Override

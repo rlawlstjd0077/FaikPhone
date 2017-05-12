@@ -6,9 +6,6 @@ import android.content.Intent;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import com.faikphone.client.network.FakeHttpClient;
-import com.faikphone.client.network.HttpClient;
-import com.faikphone.client.network.RealHttpClient;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 import org.json.JSONException;
@@ -27,12 +24,11 @@ public class CallReceiver extends BroadcastReceiver {
 //    }
     @Override
     public void onReceive(Context context, Intent intent) {
-        boolean phoneMode = new AppPreferences(context).getPhoneMode();
-        if (!phoneMode) {
-            if (intent.getAction().equals("android.intent.action.PHONE_STATE")) {
-                HttpClient httpClient = phoneMode? new FakeHttpClient(context) : new RealHttpClient(context);
+        if (intent.getAction().equals("android.intent.action.PHONE_STATE")) {
+            boolean phoneMode = new AppPreferences(context).getPhoneMode();
+            if (!phoneMode) {
+                HttpClient httpClient = new RealHttpClient(context);
                 String phoneNumber = intent.getStringExtra(TelephonyManager.EXTRA_INCOMING_NUMBER);
-                Log.d("testLog", phoneNumber);
                 try {
                     JSONObject messageJSON = new JSONObject();
                     messageJSON.put("type", "call");

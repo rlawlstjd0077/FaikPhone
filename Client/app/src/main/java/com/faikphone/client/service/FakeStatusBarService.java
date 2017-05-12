@@ -1,4 +1,4 @@
-package com.faikphone.client;
+package com.faikphone.client.service;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -17,6 +17,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.faikphone.client.utils.AppPreferences;
+import com.faikphone.client.utils.DensityConverter;
+import com.faikphone.client.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

@@ -1,9 +1,10 @@
-package com.faikphone.client;
+package com.faikphone.client.receiver;
 
 import android.content.Intent;
-import android.util.Log;
-import android.widget.Toast;
 
+import com.faikphone.client.utils.AppPreferences;
+import com.faikphone.client.activity.CallActivity;
+import com.faikphone.client.application.FaikPhoneApplication;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import org.json.JSONException;

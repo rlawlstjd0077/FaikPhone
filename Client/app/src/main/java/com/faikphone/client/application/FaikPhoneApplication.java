@@ -1,8 +1,8 @@
-package com.faikphone.client;
+package com.faikphone.client.application;
 
 import android.app.Application;
 
-import com.faikphone.client.AppPreferences;
+import com.faikphone.client.utils.AppPreferences;
 
 /**
  * Created by dsm_025 on 2017-04-14.
