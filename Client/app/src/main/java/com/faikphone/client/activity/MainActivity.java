@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
                 } else {
                     Toast.makeText(this, "Fake Call 기능을 사용하기 위해서는 전화 권한이 필요합니다.\n" +
-                    "설정에서 권한을 허용해주세요.", Toast.LENGTH_LONG).show();
+                            "설정에서 권한을 허용해주세요.", Toast.LENGTH_LONG).show();
                 }
                 break;
             case PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE:
@@ -101,28 +102,10 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    public void checkReadPhoneStatePermission() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE)
-                != PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.READ_PHONE_STATE)) {
-
-            } else {
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.READ_PHONE_STATE},
-                        PERMISSIONS_REQUEST_READ_PHONE_STATE);
-            }
-        }
-    }
-
     public void checkPermission(String permission, int requestCode) {
         if (ContextCompat.checkSelfPermission(this, permission)
                 != PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, permission)) {
-
-            } else {
-                ActivityCompat.requestPermissions(this, new String[]{permission}, requestCode);
-            }
+            ActivityCompat.requestPermissions(this, new String[]{permission}, requestCode);
         }
     }
 
