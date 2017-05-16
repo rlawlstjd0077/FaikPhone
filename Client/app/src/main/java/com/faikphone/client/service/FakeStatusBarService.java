@@ -109,6 +109,8 @@ public class FakeStatusBarService extends Service {
             } else {
                 Toast.makeText(this, "권한이 필요합니다.", Toast.LENGTH_SHORT).show();
             }
+        } else {
+            mWindowManager.addView(mFakeStatusBar, params);
         }
 
         registerReceiver(mTimeChangedReceiver, new IntentFilter(Intent.ACTION_TIME_TICK));
