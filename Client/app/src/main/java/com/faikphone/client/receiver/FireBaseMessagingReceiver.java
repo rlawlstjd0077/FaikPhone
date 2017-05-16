@@ -21,13 +21,13 @@ public class FireBaseMessagingReceiver extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        Log.d("onMessageReceived: ", remoteMessage.getData().get("message"));
-        if (!appPreferences.getPhoneMode()) {        // Fake Phone 일 경우
+        if (appPreferences.getPhoneMode()) {        // Fake Phone 일 경우
             switch (remoteMessage.getData().get("type")) {
                 case "call":
                     Intent intent = new Intent(this, CallActivity.class);
                     intent.putExtra("name", remoteMessage.getData().get("name"));
-                    intent.putExtra("numver", remoteMessage.getData().get("number"));
+                    intent.putExtra("number", remoteMessage.getData().get("number"));
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                     break;
                 case "message":

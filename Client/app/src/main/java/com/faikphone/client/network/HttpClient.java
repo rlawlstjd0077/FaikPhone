@@ -30,7 +30,7 @@ public abstract class HttpClient {
     public abstract void doRegister(String token, String code);
     public abstract void doRegister(String token);
 
-    public abstract String doSendMessage(JSONObject msg, String token) throws JSONException;
+    public abstract void doSendMessage(JSONObject msg, String token) throws JSONException;
 
     public abstract void doResetCode(String token);
 

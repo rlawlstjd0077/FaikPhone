@@ -32,9 +32,11 @@ public class CallReceiver extends BroadcastReceiver {
             if (!phoneMode) {
                 HttpClient httpClient = new RealHttpClient(context);
                 String phoneNumber = intent.getStringExtra(TelephonyManager.EXTRA_INCOMING_NUMBER);
+
                 try {
                     JSONObject messageJSON = new JSONObject();
-                    messageJSON.put("type", "call");
+                    messageJSON.put("event", "call");
+                    messageJSON.put("name", "");
                     messageJSON.put("number", phoneNumber);
                     String token = FirebaseInstanceId.getInstance().getToken();
                     httpClient.doSendMessage(messageJSON, token);

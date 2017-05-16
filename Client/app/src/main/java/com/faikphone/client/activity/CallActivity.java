@@ -25,6 +25,6 @@ public class CallActivity extends AppCompatActivity{
         getSupportActionBar().hide();
 
         Bundle bundle = getIntent().getExtras();
-        numberTV.setText(bundle.getShort("number"));
+        numberTV.setText(bundle.getString("number"));
     }
 }
