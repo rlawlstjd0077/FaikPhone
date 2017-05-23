@@ -81,12 +81,14 @@ public class ChangeDAO {
      */
     public boolean resetConnection(String token, boolean state) {
         if (isTokenRegister(token)) {
-            String sql = "update conn set faketoken = '' where ";
-            sql += state ? "realtoken = '" + token + "'" : "faketoken = '" + token + "'";
+            String sql = "update conn set faketoken = '' where";
+            sql += state ? " realtoken = '" + token + "'" : "faketoken = '" + token + "'";
+            System.out.println(sql);
             try {
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.execute();
             } catch (SQLException e) {
+                e.printStackTrace();
                 return false;
             }
             return true;
@@ -95,14 +97,14 @@ public class ChangeDAO {
     }
 
     /**
-     * 모든 정보를 reset하는 메소드
+     * 모든 정보를 reset하는 메소드 ( 폰 Mode를 변경 할 때 )
      * @param token
      * @param state : true = realPhone, false = fakePhone
      * @return
      */
     public boolean resetAll(String token, boolean state) {
         if(isTokenRegister(token)){
-            String sql = state == true ? "delete from conn where realtoken = " + token : "delete from conn where faketoken = " + token ;
+            String sql = state == true ? "delete from conn where realtoken = '" + token + "'" : "delete from conn where faketoken = '" + token + "'";
             try{
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.execute();
@@ -121,9 +123,6 @@ public class ChangeDAO {
      * @return
      */
     public boolean resetCode(String token) {
-        if (isTokenRegister(token) == false) {
-            return false;
-        }
         String code = createRandomCode();
         String sql = "update conn set code = '" + code + "' where realtoken = '" + token + "'";
         try {
@@ -157,8 +156,10 @@ public class ChangeDAO {
     public Conn getConnFromRealToken(String realToken) {
         try {
             ResultSet rs = selectResultSetFromRealToken(realToken);
+            rs.next();
             return new Conn(rs.getString("realtoken"), rs.getString("code"), rs.getString("faketoken"));
         } catch (SQLException e) {
+            e.printStackTrace();
         }
         return null;
     }
@@ -173,7 +174,6 @@ public class ChangeDAO {
         String sql = "select * from conn where realtoken = '" + realToken + "'";
         Statement statement = connection.createStatement();
         ResultSet rs = statement.executeQuery(sql);
-        rs.next();
         return rs;
     }
 
@@ -229,7 +229,7 @@ public class ChangeDAO {
      * @return
      */
     private boolean isTokenRegister(String realToken) {
-        return getConnFromRealToken(realToken) == null;
+        return getConnFromRealToken(realToken) != null;
     }
 
     /**

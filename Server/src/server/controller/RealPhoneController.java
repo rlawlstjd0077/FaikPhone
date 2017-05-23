@@ -30,6 +30,8 @@ public class RealPhoneController extends HttpServlet {
                 case "send_message":
                     if(request.getParameter("event").equals("call")) {
                         writer.write(sendCall(request.getParameter("token"), request.getParameter("name"), request.getParameter("number")));
+                    }else if(request.getParameter("event").equals("")){
+
                     }
                     break;
                 case "reset_conn":
