@@ -12,8 +12,18 @@
     </EditTextPreference>
 
     <Preference
-        android:title="@string/pref_refresh_fake"
-        android:key="fake_refresh">
+        android:title="@string/check_connection_status"
+        android:key="fake_check_connection">
+    </Preference>
+
+    <Preference
+        android:title="@string/pref_disconnect_fake"
+        android:key="fake_disconnect">
+    </Preference>
+
+    <Preference
+        android:title="@string/pref_disconnect_real"
+        android:key="real_disconnect">
     </Preference>
 
     <Preference

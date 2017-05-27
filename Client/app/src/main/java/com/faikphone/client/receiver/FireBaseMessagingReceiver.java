@@ -21,18 +21,23 @@ public class FireBaseMessagingReceiver extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        if (appPreferences.getPhoneMode()) {        // Fake Phone 일 경우
-            switch (remoteMessage.getData().get("type")) {
-                case "call":
-                    Intent intent = new Intent(this, CallActivity.class);
-                    intent.putExtra("name", remoteMessage.getData().get("name"));
-                    intent.putExtra("number", remoteMessage.getData().get("number"));
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
-                    break;
-                case "message":
-
+        try {
+            if (appPreferences.getPhoneMode()) {        // Fake Phone 일 경우
+                JSONObject jsonObject = new JSONObject(remoteMessage.getData().get("json"));
+                switch (jsonObject.getString("event")) {
+                    case "call":
+                        Intent intent = new Intent(this, CallActivity.class);
+                        intent.putExtra("name", jsonObject.getString("name"));
+                        intent.putExtra("number", jsonObject.getString("number"));
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                        break;
+                    case "call_miss":
+                        System.out.println("call miss");
+                }
             }
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
     }
 

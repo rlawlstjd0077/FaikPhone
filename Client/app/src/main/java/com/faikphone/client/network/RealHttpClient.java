@@ -13,6 +13,7 @@ import java.util.Iterator;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 
 
 /**
@@ -20,7 +21,8 @@ import okhttp3.Request;
  */
 
 public class RealHttpClient extends HttpClient{
-    private String url = "http://192.168.137.76:9000/real.do";
+    private String url = "http://192.168.0.108:8080/real.do";
+//    private String url = "http://10.156.145.157:9000/real.do";
 
     public RealHttpClient(Context context) {
         client = new OkHttpClient();
@@ -28,50 +30,49 @@ public class RealHttpClient extends HttpClient{
     }
 
     @Override
-    public void doRegister(String token, String code) {
+    public void doFakeRegister(String token, String code) {
     }
 
     @Override
-    public void doRegister(String token) {
+    public void doRealRegister(String token, String phoneNum) {
         HttpUrl.Builder urlBuilder = createBuilder("register", token);
-        final Request request = getRequest(urlBuilder);
+        urlBuilder.addQueryParameter("pnum", phoneNum);
+        final Request request = getRequest(urlBuilder, null);
         doRequest(request, false);
     }
 
     @Override
     public void doSendMessage(JSONObject msg, String token) throws JSONException {
         HttpUrl.Builder urlBuilder = createBuilder("send_message", token);
-        Iterator<String> keys = msg.keys();
-        while (keys.hasNext()) {
-            String key = keys.next();
-            String value = msg.getString(key);
-            urlBuilder.addQueryParameter(key, value);
-        }
-        final Request request = getRequest(urlBuilder);
+        final Request request = getRequest(urlBuilder, msg.toString());
         doRequest(request, false);
     }
 
 
 
     @Override
-    public String doResetConnection(String token) {
-        HttpUrl.Builder urlBuilder = createBuilder("reset_conn", token);
-        final Request request = getRequest(urlBuilder);
-        return null;
+    public void doResetConnection(String token) {
+        HttpUrl.Builder urlBuilder = createBuilder("reset_conn", "");
+        final Request request = getRequest(urlBuilder, "");
+        doRequest(request, false);
+    }
+
+    @Override
+    public void doCheckConnection(String token) {
     }
 
     @Override
     public void doResetCode(String token) {
-        HttpUrl.Builder urlBuilder = createBuilder("reset_code", token);
-        final Request request = getRequest(urlBuilder);
+        HttpUrl.Builder urlBuilder = createBuilder("reset_code", "");
+        final Request request = getRequest(urlBuilder, null);
         doRequest(request, false);
     }
 
     @Override
-    public String doResetAll(String token) {
-        HttpUrl.Builder urlBuilder = createBuilder("reset_all", token);
-        final Request request = getRequest(urlBuilder);
-        return null;
+    public void doResetAll(String token) {
+        HttpUrl.Builder urlBuilder = createBuilder("reset_all", "");
+        final Request request = getRequest(urlBuilder, null);
+        doRequest(request, false);
     }
 
 

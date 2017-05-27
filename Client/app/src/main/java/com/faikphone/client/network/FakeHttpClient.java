@@ -2,6 +2,7 @@ package com.faikphone.client.network;
 
 import android.content.Context;
 
+import com.faikphone.client.data.Response;
 import com.faikphone.client.data.ResponseHandler;
 
 import org.json.JSONException;
@@ -18,7 +19,8 @@ import okhttp3.Request;
  */
 
 public class FakeHttpClient extends HttpClient{
-    private String url = "http://192.168.137.253:8999/fake.do";
+//    private String url = "http://192.168.137.253:8999/fake.do";
+    private String url = "http://192.168.0.108:8080/fake.do";
 
     public FakeHttpClient(Context context){
         client = new OkHttpClient();
@@ -26,27 +28,27 @@ public class FakeHttpClient extends HttpClient{
     }
 
     @Override
-    public void doRegister(String token, String code){
+    public void doFakeRegister(String token, String code){
         HttpUrl.Builder urlBuilder = createBuilder("register", token);
         urlBuilder.addQueryParameter("code", code);
-        final Request request = getRequest(urlBuilder);
+        final Request request = getRequest(urlBuilder, "");
         doRequest(request, true);
     }
 
     @Override
-    public void doRegister(String token) {
+    public void doRealRegister(String token, String phoneNum) {
     }
 
     @Override
     public void doSendMessage(JSONObject msg, String token) throws JSONException {
         HttpUrl.Builder urlBuilder = createBuilder("send_message", token);
-        Iterator<String> keys = msg.keys();
-        while (keys.hasNext()) {
-            String key = keys.next();
-            String value = msg.getString(key);
-            urlBuilder.addQueryParameter(key, value);
-        }
-        final Request request = getRequest(urlBuilder);
+//        Iterator<String> keys = msg.keys();
+//        while (keys.hasNext()) {
+//            String key = keys.next();
+//            String value = msg.getString(key);
+//            urlBuilder.addQueryParameter(key, value);
+//        }
+        final Request request = getRequest(urlBuilder, msg.toString());
         doRequest(request, true);
     }
 
@@ -55,17 +57,17 @@ public class FakeHttpClient extends HttpClient{
     }
 
     @Override
-    public String doResetAll(String token) {
+    public void doResetAll(String token) {
         HttpUrl.Builder urlBuilder = createBuilder("reset_all", token);
-        final Request request = getRequest(urlBuilder);
-        return null;
+        final Request request = getRequest(urlBuilder, "");
+        doRequest(request, true);
     }
 
     @Override
-    public String doResetConnection(String token) {
+    public void doResetConnection(String token) {
         HttpUrl.Builder urlBuilder = createBuilder("reset_conn", token);
-        final Request request = getRequest(urlBuilder);
-        return null;
+        final Request request = getRequest(urlBuilder, "");
+        doRequest(request, true);
     }
 
     @Override
@@ -73,4 +75,10 @@ public class FakeHttpClient extends HttpClient{
         return HttpUrl.parse(url).newBuilder().addQueryParameter("type", type).addQueryParameter("token", token);
     }
 
+    @Override
+    public void doCheckConnection(String token) {
+        HttpUrl.Builder urlBuilder = createBuilder("check_conn", token);
+        final Request request = getRequest(urlBuilder, "");
+        doRequest(request, true);
+    }
 }
