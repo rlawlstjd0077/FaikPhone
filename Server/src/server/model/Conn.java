@@ -7,11 +7,13 @@ public class Conn {
     private String realToken;
     private String fakeToken;
     private String code;
+    private String pnum;
 
-    public Conn(String realToken, String code, String fakeToken) {
+    public Conn(String realToken, String code, String fakeToken, String pnum) {
         this.realToken = realToken;
         this.fakeToken = fakeToken;
         this.code = code;
+        this.pnum = pnum;
     }
 
     public String getRealToken() {
@@ -23,6 +25,9 @@ public class Conn {
     public String getCode() {
         return code;
     }
+    public String getPnum() {
+        return pnum;
+    }
 
     public void setFakeToken(String fakeToken) {
         this.fakeToken = fakeToken;
@@ -32,5 +37,8 @@ public class Conn {
     }
     public void setCode(String code) {
         this.code = code;
+    }
+    public void setPnum(String pnum) {
+        this.pnum = pnum;
     }
 }

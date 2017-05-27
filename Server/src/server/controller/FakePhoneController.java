@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -16,7 +17,7 @@ import java.io.PrintWriter;
 public class FakePhoneController extends HttpServlet {
     ChangeDAO dao;
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         dao = ChangeDAO.getInstance();
         PrintWriter writer = response.getWriter();
         String type = request.getParameter("type").toString();
@@ -27,15 +28,21 @@ public class FakePhoneController extends HttpServlet {
                 break;
             case "send_message":
                 writer.println(sendMessage(request.getParameter("token"), request.getParameter("message")));
-                writer.close();
                 break;
             case "reset_all":
                 writer.println(resetAll(request.getParameter("token")));
-                writer.close();
+                break;
             case "reset_conn":
                 writer.println(resetConnection(request.getParameter("token")));
-                writer.close();
+                break;
+            case "check_conn":
+                writer.println(checkConnection(request.getParameter("token")));
+                break;
+            default:
+                System.out.println("Invalid Request");
+                writer.println("Invalid Request");
         }
+        writer.close();
     }
 
     private String sendMessage(String token, String message){
@@ -48,7 +55,7 @@ public class FakePhoneController extends HttpServlet {
 
     private String registerFakePhone(String token, String code){
         return dao.insertFaikPhoneToken(token, code) == true ?
-                Util.makeSuccessResponse("register_response", "Certification Success") :
+                Util.makeSuccessResponse("register_response", dao.getPhoneNum(token)) :
                 Util.makeErrorResponse("register_response", "Certification Failed");
     }
 
@@ -62,5 +69,12 @@ public class FakePhoneController extends HttpServlet {
         return dao.resetConnection(token, false) == true ?
                 Util.makeSuccessResponse("reset_conn_response", "Reset Success") :
                 Util.makeErrorResponse("reset_conn_response", "Reset Failed");
+    }
+
+    private String checkConnection(String token){
+        String phoneNum;
+        return (phoneNum = dao.getPhoneNum(token)) != null ?
+                Util.makeCodeResponse("check_connection_response", phoneNum) :
+                Util.makeErrorResponse("check_connection_response", "Not Registered");
     }
 }

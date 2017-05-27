@@ -36,30 +36,30 @@ public class ChangeDAO {
      * @param token
      * @return
      */
-    public boolean insertRealPhoneToken(String token) {
-        String sql = "insert into conn(realtoken, code) values (?, ?) ";
-
+    public boolean insertRealPhoneToken(String token, String phoneNum) {
+        String sql = "insert into conn(realtoken, code, pnum) values (?, ?, ?) ";
         String code = createRandomCode();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, token);
             preparedStatement.setString(2, code);
+            preparedStatement.setString(3, phoneNum);
             preparedStatement.execute();
         } catch (SQLException e) {
+            e.printStackTrace();
             return false;
         }
         return true;
     }
 
     /**
-     * Faki Phone 에서 인증 성공 후 토큰을 등록할 때
-     *
+     * Faik Phone 에서 인증 성공 후 토큰을 등록할 때
      * @param token
      * @param code
      * @return
      */
     public boolean insertFaikPhoneToken(String token, String code) {
-        if (isTokenRegister(code) == false) {
+        if (isAnotherFakePhoneRegisterd(code)) {            //이미 다른 FakePhone이 등록 되어 있는지 검사
             return false;
         }
 
@@ -80,7 +80,6 @@ public class ChangeDAO {
      * @return
      */
     public boolean resetConnection(String token, boolean state) {
-        if (isTokenRegister(token)) {
             String sql = "update conn set faketoken = '' where";
             sql += state ? " realtoken = '" + token + "'" : "faketoken = '" + token + "'";
             System.out.println(sql);
@@ -92,8 +91,6 @@ public class ChangeDAO {
                 return false;
             }
             return true;
-        }
-        return false;
     }
 
     /**
@@ -142,7 +139,7 @@ public class ChangeDAO {
     public Conn getConnFromFakeToken(String fakeToken) {
         try {
             ResultSet rs = selectResultSetFromFakeToken(fakeToken);
-            return new Conn(rs.getString("realtoken"), rs.getString("code"), rs.getString("faketoken"));
+            return new Conn(rs.getString("realtoken"), rs.getString("code"), rs.getString("faketoken"), rs.getString("pnum"));
         } catch (SQLException e) {
         }
         return null;
@@ -157,7 +154,18 @@ public class ChangeDAO {
         try {
             ResultSet rs = selectResultSetFromRealToken(realToken);
             rs.next();
-            return new Conn(rs.getString("realtoken"), rs.getString("code"), rs.getString("faketoken"));
+            return new Conn(rs.getString("realtoken"), rs.getString("code"), rs.getString("faketoken"), rs.getString("pnum"));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public Conn getConnFromCode(String code){
+        try{
+            ResultSet rs = selectResultSetFromCode(code);
+            rs.next();
+            return new Conn(rs.getString("realtoken"), rs.getString("code"), rs.getString("faketoken"), rs.getString("pnum"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -184,7 +192,7 @@ public class ChangeDAO {
      * @throws SQLException
      */
     public ResultSet selectResultSetFromFakeToken(String fakeToken) throws SQLException {
-        String sql = "select * from conn where faketoken = " + fakeToken;
+        String sql = "select * from conn where faketoken = '" + fakeToken + "'";
         Statement statement = connection.createStatement();
         ResultSet rs = statement.executeQuery(sql);
         rs.next();
@@ -198,10 +206,9 @@ public class ChangeDAO {
      * @throws SQLException
      */
     public ResultSet selectResultSetFromCode(String code) throws SQLException {
-        String sql = "select * from conn where code = " + code;
+        String sql = "select * from conn where code = '" + code + "'";
         Statement statement = connection.createStatement();
         ResultSet rs = statement.executeQuery(sql);
-        rs.next();
         return rs;
     }
 
@@ -224,12 +231,15 @@ public class ChangeDAO {
 
     /**
      * RealPhone 토큰이 등록 되어 있는지를 체크하는 메소드
-     *
      * @param realToken
      * @return
      */
     private boolean isTokenRegister(String realToken) {
         return getConnFromRealToken(realToken) != null;
+    }
+
+    private boolean isAnotherFakePhoneRegisterd(String code){
+        return !getConnFromCode(code).getFakeToken().equals("");
     }
 
     /**
@@ -256,7 +266,18 @@ public class ChangeDAO {
     public String getAuthCode(String realToken){
         try {
             ResultSet resultSet = selectResultSetFromRealToken(realToken);
+            resultSet.next();
             return resultSet.getString("code");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public String getPhoneNum(String fakeToken){
+        try{
+            ResultSet resultSet = selectResultSetFromFakeToken(fakeToken);
+            return resultSet.getString("pnum");
         } catch (SQLException e) {
             e.printStackTrace();
         }

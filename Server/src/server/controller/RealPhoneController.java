@@ -1,4 +1,5 @@
 package server.controller;
+import org.json.JSONObject;
 import server.Util;
 import server.dao.ChangeDAO;
 import server.manager.MessageManager;
@@ -7,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -16,22 +18,31 @@ import java.io.PrintWriter;
 public class RealPhoneController extends HttpServlet {
     private ChangeDAO dao;
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("서버 접속");
         dao = ChangeDAO.getInstance();
         PrintWriter writer = response.getWriter();
         String type = request.getParameter("type").toString();
         System.out.println(type + " request from " + request.getParameter("token") + "to RealPhone Controller");
+
         if(type != null) {
             switch (type) {
                 case "register":
-                    writer.write(registerRealPhone(request.getParameter("token")));
+                    writer.write(registerRealPhone(request.getParameter("token"), request.getParameter("pnum")));
                     break;
                 case "send_message":
-                    if(request.getParameter("event").equals("call")) {
-                        writer.write(sendCall(request.getParameter("token"), request.getParameter("name"), request.getParameter("number")));
-                    }else if(request.getParameter("event").equals("")){
-
+                    String result = "";
+                    String line = null;
+                    try {
+                        BufferedReader reader = request.getReader();
+                        while ((line = reader.readLine()) != null)
+                            result += line;
+                    } catch (Exception e) { /*report an error*/ }
+                    JSONObject object = new JSONObject(result);
+                    if(object.getString("event").equals("call")) {
+                        writer.write(sendMessage(object, request.getParameter("token")));
+                    }else if(object.getString("event").equals("call_miss")){
+                        writer.write(sendMessage(object, request.getParameter("token")));
                     }
                     break;
                 case "reset_conn":
@@ -55,26 +66,19 @@ public class RealPhoneController extends HttpServlet {
         writer.close();
     }
 
-    private String registerRealPhone(String token){
-        return dao.insertRealPhoneToken(token) == true ?
+    private String registerRealPhone(String token, String phoneNum){
+        System.out.println("Dasd");
+        return dao.insertRealPhoneToken(token, phoneNum) == true ?
                 Util.makeCodeResponse("register_response", dao.getAuthCode(token)):
                 Util.makeErrorResponse("register_response", "Device Already Registered");
     }
 
-    private String sendCall(String token, String name, String number){
+    private String sendMessage(JSONObject json, String token){
         MessageManager manager = new MessageManager(dao.getConnFromRealToken(token).getFakeToken());
-        boolean response = manager.sendCall(name, number);
+        boolean response = manager.sendMessage(json.toString());
         return response == true ?
                 Util.makeSuccessResponse("send_call_response", "Message Request Success") :
                 Util.makeErrorResponse("send_call_response", "Message Request Failed");
-    }
-
-    private String sendMessage(String token, String name, String number, String content){
-        MessageManager manager = new MessageManager(dao.getConnFromRealToken(token).getFakeToken());
-        boolean response = manager.sendMessage(name, number, content);
-        return response == true ?
-                Util.makeSuccessResponse("send_message_response", "Message Request Success") :
-                Util.makeErrorResponse("send_message_response", "Message Request Failed");
     }
 
     private String resetConnection(String token){

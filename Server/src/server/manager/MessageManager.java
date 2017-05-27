@@ -23,17 +23,13 @@ public class MessageManager {
         this.token = token;
     }
 
-    public boolean sendCall(String name, String number){
-        return doRequest(createBodyData(name, number, "call").toString());
-    }
-
-    public boolean sendMessage(String name, String number, String content){
-        return doRequest(createBodyData(name, number,content, "message").toString());
+    public boolean sendMessage(String jsonData){
+        return doRequest(createBodyData(jsonData).toString());
     }
 
     public boolean doRequest(String bodyData){
         final OkHttpClient client = new OkHttpClient();
-        RequestBody body = RequestBody.create(JSON, bodyData.toString());
+        RequestBody body = RequestBody.create(JSON, bodyData);
         final Request request = new Request.Builder()
                 .url(URL)
                 .post(body)
@@ -48,32 +44,12 @@ public class MessageManager {
         return true;
     }
 
-    private JSONObject createBodyData(String name, String number, String type){
+    private JSONObject createBodyData(String json){
         JSONObject object = new JSONObject();
         try {
             JSONObject data = new JSONObject();
             object.put("to", token);
-            data.put("type", type);
-            data.put("name",  name);
-            data.put("number", number);
-            data.put("score","5x1");
-            data.put("time", "9:50");
-            object.put("data", data);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return object;
-    }
-
-    private JSONObject createBodyData(String name, String number, String content, String type){
-        JSONObject object = new JSONObject();
-        try {
-            JSONObject data = new JSONObject();
-            object.put("to", token);
-            data.put("type", type);
-            data.put("name",  name);
-            data.put("number", number);
-            data.put("content", content);
+            data.put("json", json);
             data.put("score","5x1");
             data.put("time", "9:50");
             object.put("data", data);
