@@ -40,9 +40,4 @@ public class FireBaseMessagingReceiver extends FirebaseMessagingService {
             e.printStackTrace();
         }
     }
-
-    public void handleMessage(String message) throws JSONException {
-        JSONObject object = new JSONObject(message);
-
-    }
 }
