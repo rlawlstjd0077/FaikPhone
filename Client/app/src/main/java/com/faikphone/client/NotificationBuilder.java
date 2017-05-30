@@ -34,7 +34,7 @@ public class NotificationBuilder {
         mBuilder.setWhen(System.currentTimeMillis());
         mBuilder.setNumber(10);
         mBuilder.setContentTitle(title);
-        ;
+
         mBuilder.setContentText(content);
         mBuilder.setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
         mBuilder.setContentIntent(pendingIntent);
