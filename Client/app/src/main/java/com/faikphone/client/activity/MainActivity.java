@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startBtn = (Button) findViewById(R.id.startBtn);
 
+        startBtn = (Button) findViewById(R.id.startBtn);
         startBtn.setOnClickListener(event -> onStartBtnClicked(event));
 
         if (checkDrawOverlayPermission()) {
@@ -55,8 +55,20 @@ public class MainActivity extends AppCompatActivity  {
         checkPermission(Manifest.permission.READ_PHONE_STATE, PERMISSIONS_REQUEST_READ_PHONE_STATE);
         checkPermission(Manifest.permission.READ_EXTERNAL_STORAGE, PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
         checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
 
         this.appPreferences = FaikPhoneApplication.getAppPreferences();
+
+        if(appPreferences.getPhoneMode()){
+            startBtn.setVisibility(View.VISIBLE);
+        }else{
+            startBtn.setVisibility(View.INVISIBLE);
+        }
+
         if (appPreferences.getPhoneMode()) {  // fakePhone
             getSupportActionBar().setTitle("FaikPhone(Fake Mode)");
         } else {  // realPhone
