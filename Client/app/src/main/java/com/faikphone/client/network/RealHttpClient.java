@@ -21,7 +21,7 @@ import okhttp3.RequestBody;
  */
 
 public class RealHttpClient extends HttpClient{
-    private String url = "http://192.168.0.108:8080/real.do";
+    private String url = "http://10.156.145.157:8080/real.do";
 //    private String url = "http://10.156.145.157:9000/real.do";
 
     public RealHttpClient(Context context) {
