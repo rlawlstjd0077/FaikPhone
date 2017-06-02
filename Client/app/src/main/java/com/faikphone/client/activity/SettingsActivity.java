@@ -164,11 +164,11 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 // TODO: 공기계 -> 본 핸드폰, 또는 그 반대 모드로 넘어갈 때 이전의 기기와의 연결을 끊기
-//                                if((Boolean) newValue){
-//                                    httpClient.doResetAll(FirebaseInstanceId.getInstance().getToken());
-//                                }else{
-//                                    httpClient.doResetConnection(FirebaseInstanceId.getInstance().getToken());
-//                                }
+                                if((Boolean) newValue){
+                                    httpClient.doResetAll(FirebaseInstanceId.getInstance().getToken());
+                                }else{
+                                    httpClient.doResetConnection(FirebaseInstanceId.getInstance().getToken());
+                                }
                                 isFake = (boolean) newValue;
                                 mAppPrefs.setPhoneMode(isFake);
                                 ChangePreferences();
