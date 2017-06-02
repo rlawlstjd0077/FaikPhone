@@ -1,13 +1,11 @@
-package com.faikphone.client.receiver;
+package com.faikphone.client.service;
 
 import android.content.Intent;
-import android.os.Vibrator;
-import android.util.Log;
 
 import com.faikphone.client.NotificationBuilder;
-import com.faikphone.client.utils.AppPreferences;
 import com.faikphone.client.activity.CallActivity;
 import com.faikphone.client.application.FaikPhoneApplication;
+import com.faikphone.client.utils.AppPreferences;
 import com.faikphone.client.utils.VibrateManager;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
@@ -21,6 +19,7 @@ import org.json.JSONObject;
 
 public class FireBaseMessagingReceiver extends FirebaseMessagingService {
     AppPreferences appPreferences = FaikPhoneApplication.getAppPreferences();
+
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         try {
