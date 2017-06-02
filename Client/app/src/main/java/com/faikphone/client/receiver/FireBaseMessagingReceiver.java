@@ -23,7 +23,6 @@ public class FireBaseMessagingReceiver extends FirebaseMessagingService {
     AppPreferences appPreferences = FaikPhoneApplication.getAppPreferences();
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        VibrateManager thread = null;
         try {
             if (appPreferences.getPhoneMode()) {        // Fake Phone 일 경우
                 JSONObject jsonObject = new JSONObject(remoteMessage.getData().get("json"));
@@ -40,10 +39,10 @@ public class FireBaseMessagingReceiver extends FirebaseMessagingService {
                         startMain.addCategory(Intent.CATEGORY_HOME);
                         startMain.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                         getApplicationContext().startActivity(startMain);
-                        NotificationBuilder.missedCall(getApplicationContext(), "엄마", "010-2222-2222");
+                        NotificationBuilder.missedCall(getApplicationContext(), jsonObject.getString("name") != null
+                                ? jsonObject.getString("name") : null,jsonObject.getString("number"));
                         break;
                     case "sms":
-                        NotificationBuilder.sms(getApplicationContext(), "엄마", "밥 먹어라");
                         break;
                 }
             }
