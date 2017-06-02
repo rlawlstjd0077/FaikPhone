@@ -1,4 +1,4 @@
-package com.faikphone.client.receiver;
+package com.faikphone.client.service;
 
 import android.content.Intent;
 import android.util.Log;
@@ -31,7 +31,7 @@ public class FireBaseMessagingReceiver extends FirebaseMessagingService {
                     startActivity(intent);
                     break;
                 case "message":
-
+                    break;
             }
         }
     }
