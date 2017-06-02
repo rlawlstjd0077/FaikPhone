@@ -1,37 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java" line="85" />
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="115972f3-7729-4829-b68d-6051cbc1115b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Client/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Client/app/src/main/java/com/faikphone/client/CallReceiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/app/src/main/java/com/faikphone/client/receiver/CallReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Client/새 텍스트 문서.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FaikPhone_Server_war_exploded/WEB-INF/classes/com/faikphone/server/MessageManager.class" afterPath="$PROJECT_DIR$/out/artifacts/FaikPhone_Server_war_exploded/WEB-INF/classes/com/faikphone/server/MessageManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FaikPhone_Server_war_exploded/WEB-INF/classes/com/faikphone/server/Util.class" afterPath="$PROJECT_DIR$/out/artifacts/FaikPhone_Server_war_exploded/WEB-INF/classes/com/faikphone/server/Util.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FaikPhone_Server_war_exploded/WEB-INF/classes/com/faikphone/server/controller/FakePhoneController.class" afterPath="$PROJECT_DIR$/out/artifacts/FaikPhone_Server_war_exploded/WEB-INF/classes/com/faikphone/server/controller/FakePhoneController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FaikPhone_Server_war_exploded/WEB-INF/classes/com/faikphone/server/controller/RealPhoneController.class" afterPath="$PROJECT_DIR$/out/artifacts/FaikPhone_Server_war_exploded/WEB-INF/classes/com/faikphone/server/controller/RealPhoneController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FaikPhone_Server_war_exploded/WEB-INF/classes/com/faikphone/server/dao/ChangeDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/FaikPhone_Server_war_exploded/WEB-INF/classes/com/faikphone/server/dao/ChangeDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FaikPhone-Server/com/faikphone/server/MessageManager.class" afterPath="$PROJECT_DIR$/out/production/FaikPhone-Server/com/faikphone/server/MessageManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FaikPhone-Server/com/faikphone/server/Util.class" afterPath="$PROJECT_DIR$/out/production/FaikPhone-Server/com/faikphone/server/Util.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FaikPhone-Server/com/faikphone/server/controller/FakePhoneController.class" afterPath="$PROJECT_DIR$/out/production/FaikPhone-Server/com/faikphone/server/controller/FakePhoneController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FaikPhone-Server/com/faikphone/server/controller/RealPhoneController.class" afterPath="$PROJECT_DIR$/out/production/FaikPhone-Server/com/faikphone/server/controller/RealPhoneController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FaikPhone-Server/com/faikphone/server/dao/ChangeDAO.class" afterPath="$PROJECT_DIR$/out/production/FaikPhone-Server/com/faikphone/server/dao/ChangeDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/../Client/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Client/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/.idea/modules.xml" afterPath="$PROJECT_DIR$/../Client/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/app/src/main/java/com/faikphone/client/activity/SettingsActivity.java" afterPath="$PROJECT_DIR$/../Client/app/src/main/java/com/faikphone/client/activity/SettingsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/app/src/main/java/com/faikphone/client/network/FakeHttpClient.java" afterPath="$PROJECT_DIR$/../Client/app/src/main/java/com/faikphone/client/network/FakeHttpClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Client/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/../Client/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java" afterPath="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/FakePhoneController.java" afterPath="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/FakePhoneController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java" afterPath="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java" afterPath="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java" />
-    </list>
+    <list default="true" id="abf955d2-5e97-4b28-8dd4-ad024c4a840b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,150 +15,102 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.597181">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/Util.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="418">
-                  <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Response.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/model/Response.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#214#215#0" expanded="false" />
-                    <element signature="e#241#242#0" expanded="false" />
-                    <element signature="e#281#282#0" expanded="false" />
-                    <element signature="e#313#314#0" expanded="false" />
-                    <element signature="e#345#346#0" expanded="false" />
-                    <element signature="e#373#374#0" expanded="false" />
-                    <element signature="e#415#416#0" expanded="false" />
-                    <element signature="e#449#450#0" expanded="false" />
-                    <element signature="e#483#484#0" expanded="false" />
-                    <element signature="e#513#514#0" expanded="false" />
-                    <element signature="e#559#560#0" expanded="false" />
-                    <element signature="e#597#598#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FaikPhone Protocol" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/FaikPhone Protocol">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1064">
-                  <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ChangeDAO.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2869">
-                  <caret line="157" column="56" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="false" />
-                    <element signature="e#412#413#0" expanded="false" />
-                    <element signature="e#443#444#0" expanded="false" />
-                    <element signature="e#6755#6756#0" expanded="false" />
-                    <element signature="e#6817#6818#0" expanded="false" />
-                    <marker date="1494566358421" expanded="true" signature="1077:1124" ph="insert into conn... " />
-                    <marker date="1494566358421" expanded="true" signature="1800:1857" ph="update conn " />
-                    <marker date="1494566358421" expanded="true" signature="1800:1858" ph="update conn " />
-                    <marker date="1494566358421" expanded="true" signature="1800:1871" ph="update conn " />
-                    <marker date="1494566358421" expanded="true" signature="2391:2420" ph="update conn " />
-                    <marker date="1494566358421" expanded="true" signature="2391:2427" ph="update conn " />
-                    <marker date="1494566358421" expanded="true" signature="2391:2428" ph="update conn " />
-                    <marker date="1494566358421" expanded="true" signature="3091:3125" ph="delete from " />
-                    <marker date="1494566358421" expanded="true" signature="3091:3126" ph="delete from " />
-                    <marker date="1494566358421" expanded="true" signature="3091:3174" ph="delete from " />
-                    <marker date="1494566358421" expanded="true" signature="3759:3830" ph="update conn " />
-                    <marker date="1494566358421" expanded="true" signature="5130:5167" ph="select * fro... conn" />
-                    <marker date="1494566358421" expanded="true" signature="5130:5168" ph="select * fro... conn" />
-                    <marker date="1494566358421" expanded="true" signature="5130:5186" ph="select * fro... conn" />
-                    <marker date="1494566358421" expanded="true" signature="5583:5620" ph="select * fro... conn" />
-                    <marker date="1494566358421" expanded="true" signature="6010:6042" ph="select * fro... conn" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RealPhoneController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="72" column="68" lean-forward="false" selection-start-line="72" selection-start-column="68" selection-end-line="72" selection-end-column="68" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MessageManager.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="339">
-                  <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-                  <folding>
-                    <element signature="e#787#788#0" expanded="true" />
-                    <element signature="e#860#861#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="RealPhoneController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="377">
-                  <caret line="80" column="61" lean-forward="false" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="61" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="FakePhoneController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/controller/FakePhoneController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="49" column="42" lean-forward="true" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/manager/MessageManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="26" column="62" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="62" />
+              <folding>
+                <element signature="e#688#689#0" expanded="true" />
+                <element signature="e#722#723#0" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
+                <element signature="e#841#842#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RealPhoneController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/server/controller/RealPhoneController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangeDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/dao/ChangeDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding>
+                <element signature="e#7227#7228#0" expanded="true" />
+                <element signature="e#7289#7290#0" expanded="true" />
+                <marker date="1495913068583" expanded="true" signature="1020:1076" ph="insert into conn... " />
+                <marker date="1495913068583" expanded="true" signature="1877:1948" ph="update conn " />
+                <marker date="1495913068583" expanded="true" signature="2430:2466" ph="update conn " />
+                <marker date="1495913068583" expanded="true" signature="3191:3281" ph="delete from " />
+                <marker date="1495913068583" expanded="true" signature="3191:3296" ph="delete from " />
+                <marker date="1495913068583" expanded="true" signature="3789:3860" ph="update conn " />
+                <marker date="1495913068583" expanded="true" signature="5633:5689" ph="select * fro... conn" />
+                <marker date="1495913068583" expanded="true" signature="6067:6104" ph="select * fro... conn" />
+                <marker date="1495913068583" expanded="true" signature="6067:6105" ph="select * fro... conn" />
+                <marker date="1495913068583" expanded="true" signature="6067:6123" ph="select * fro... conn" />
+                <marker date="1495913068583" expanded="true" signature="6501:6533" ph="select * fro... conn" />
+                <marker date="1495913068583" expanded="true" signature="6501:6534" ph="select * fro... conn" />
+                <marker date="1495913068583" expanded="true" signature="6501:6547" ph="select * fro... conn" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Conn.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/model/Conn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="40" column="38" lean-forward="true" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+              <folding>
+                <element signature="e#629#630#0" expanded="true" />
+                <element signature="e#656#657#0" expanded="true" />
+                <element signature="e#981#982#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>reset</find>
+      <find>message</find>
+      <find>call</find>
       <find>resetCode</find>
-      <find>fir</find>
-      <find>f</find>
-      <find>for</find>
-      <find>state</find>
-      <find>code</find>
-      <find>코드</find>
-      <find>preparedStatement</find>
-      <find>register_res</find>
-      <find>System</find>
-      <find>update</find>
     </findStrings>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -195,15 +120,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/FaikPhone 프로토콜" />
-        <option value="$PROJECT_DIR$/FaikPhone-Server/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/model/Response.java" />
-        <option value="$PROJECT_DIR$/FaikPhone Protocol" />
-        <option value="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/Util.java" />
-        <option value="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/FakePhoneController.java" />
-        <option value="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java" />
-        <option value="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java" />
-        <option value="$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/server/model/Conn.java" />
+        <option value="$PROJECT_DIR$/src/server/dao/ChangeDAO.java" />
+        <option value="$PROJECT_DIR$/src/server/controller/FakePhoneController.java" />
+        <option value="$PROJECT_DIR$/src/server/manager/MessageManager.java" />
+        <option value="$PROJECT_DIR$/src/server/controller/RealPhoneController.java" />
       </list>
     </option>
   </component>
@@ -221,11 +143,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2" />
-    <option name="width" value="1364" />
-    <option name="height" value="728" />
+    <option name="x" value="-8" />
+    <option name="width" value="1378" />
+    <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -241,7 +162,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -250,7 +172,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FaikPhone-Server" />
+              <option name="myItemId" value="Server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -260,75 +182,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FaikPhone-Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FaikPhone-Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FaikPhone-Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FaikPhone-Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FaikPhone-Server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -346,29 +200,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FaikPhone-Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FaikPhone-Server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -380,30 +212,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="manager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="database.main" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../FTPSServerExample" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="Real&#9;PSI&#9;JAVA://com.faikphone.server.controller.RealPhoneController&#10;REal&#9;FILE&#9;file://C:/Users/dsm_025/Desktop/Work/FaikPhone/Server/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java&#10;Rea&#9;FILE&#9;file://C:/Users/dsm_025/Desktop/Work/FaikPhone/Server/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dsm_025\Desktop\Work\FaikPhone\Server\FaikPhone-Server\lib" />
-    </key>
+    <property name="SearchEverywhereHistoryKey" value="FakePh&#9;PSI&#9;JAVA://server.controller.FakePhoneController&#10;Real&#9;FILE&#9;file://C:/Users/dsm_025/Desktop/Work/FaikPhone/Server/src/server/controller/RealPhoneController.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -418,15 +244,66 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Unnamed">
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.12" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment />
-      <server-settings />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_Server" />
+      </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
       <predefined_log_file id="Tomcat Manager" enabled="false" />
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51458" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -434,61 +311,6 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -669,6 +491,15 @@
       <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -736,7 +567,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="FaikPhone-Server" />
+      <module name="TestServer" />
       <envs />
       <method />
     </configuration>
@@ -817,19 +648,16 @@
       <method />
     </configuration>
     <configuration default="false" name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.12" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8999/" />
-      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="FaikPhone-Server:war exploded">
+        <artifact name="TestServer:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Server" />
-        <option name="HTTP_PORT" value="8999" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Server_2" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -838,7 +666,7 @@
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="58333" />
+        <option name="DEBUG_PORT" value="51458" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -887,7 +715,7 @@
       </ConfigurationWrapper>
       <method>
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="FaikPhone-Server:war exploded" />
+          <artifact name="TestServer:war exploded" />
         </option>
       </method>
     </configuration>
@@ -898,78 +726,89 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="115972f3-7729-4829-b68d-6051cbc1115b" name="Default" comment="" />
-      <created>1491868068166</created>
+      <changelist id="abf955d2-5e97-4b28-8dd4-ad024c4a840b" name="Default" comment="" />
+      <created>1494862328403</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1491868068166</updated>
-      <workItem from="1491868070617" duration="4553000" />
-      <workItem from="1492053237167" duration="10317000" />
-      <workItem from="1492164072934" duration="680000" />
-      <workItem from="1492323225746" duration="1201000" />
-      <workItem from="1492391445741" duration="1367000" />
-      <workItem from="1492474563935" duration="3618000" />
-      <workItem from="1492652946807" duration="5738000" />
-      <workItem from="1493077954319" duration="4450000" />
-      <workItem from="1493164229869" duration="599000" />
-      <workItem from="1493166748542" duration="602000" />
-      <workItem from="1493260055301" duration="4532000" />
-      <workItem from="1493337132638" duration="2940000" />
-      <workItem from="1494471223319" duration="11391000" />
-      <workItem from="1494547120135" duration="7964000" />
+      <updated>1494862328403</updated>
+      <workItem from="1494862329674" duration="9519000" />
+      <workItem from="1494897461552" duration="1213000" />
+      <workItem from="1495072783174" duration="2028000" />
+      <workItem from="1495429197118" duration="3934000" />
+      <workItem from="1495497052682" duration="867000" />
+      <workItem from="1495498070738" duration="6152000" />
+      <workItem from="1495897469920" duration="18858000" />
     </task>
-    <task id="LOCAL-00001" summary="Modify protocol and fix some error">
-      <created>1493341046533</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1493341046533</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65166000" />
+    <option name="totallyTimeSpent" value="42571000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="0" width="1364" height="728" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3241491" sideWeight="0.50296736" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33911672" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16152717" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3273906" sideWeight="0.5333828" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3241491" sideWeight="0.49703264" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19065282" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4022082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4022082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33911672" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16152717" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -977,45 +816,51 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modify protocol and fix some error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify protocol and fix some error" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java</url>
-          <line>40</line>
+          <url>file://$PROJECT_DIR$/src/server/dao/ChangeDAO.java</url>
+          <line>82</line>
           <properties />
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java</url>
-          <line>124</line>
+          <url>file://$PROJECT_DIR$/src/server/dao/ChangeDAO.java</url>
+          <line>84</line>
           <properties />
-          <option name="timeStamp" value="22" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java</url>
-          <line>258</line>
+          <url>file://$PROJECT_DIR$/src/server/dao/ChangeDAO.java</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/server/dao/ChangeDAO.java</url>
+          <line>39</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java</url>
-          <line>62</line>
+          <url>file://$PROJECT_DIR$/src/server/controller/FakePhoneController.java</url>
+          <line>20</line>
           <properties />
-          <option name="timeStamp" value="25" />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/server/controller/RealPhoneController.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="38" />
+      <option name="time" value="53" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
-        <watch expression="request" language="JAVA" />
-        <watch expression="request.getParameter(&quot;type&quot;)" language="JAVA" />
-        <watch expression="dao.getConnFromRealToken(token).getFakeToken()" language="JAVA" />
+        <watch expression="dao.getConnFromRealToken(json.getString(&quot;token&quot;)).getFakeToken()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -1024,596 +869,382 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/server/controller/FakePhoneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3914">
-          <caret line="212" column="20" lean-forward="false" selection-start-line="212" selection-start-column="20" selection-end-line="212" selection-end-column="20" />
+        <state relative-caret-position="152">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
-            <element signature="e#443#444#0" expanded="false" />
-            <element signature="e#6755#6756#0" expanded="false" />
-            <element signature="e#6817#6818#0" expanded="false" />
-            <marker date="1494566358421" expanded="true" signature="1077:1124" ph="insert into conn... " />
-            <marker date="1494566358421" expanded="true" signature="1800:1857" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="1800:1858" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="1800:1871" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2420" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2427" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2428" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="3091:3125" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3091:3126" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3091:3174" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3759:3830" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="5130:5167" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5130:5168" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5130:5186" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5583:5620" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="6010:6042" ph="select * fro... conn" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="46" column="42" lean-forward="true" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
-          <folding>
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="5" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/model/Conn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/web/WEB-INF/server-config.wsdd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="47" column="35" lean-forward="false" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
-          <folding>
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone Protocol">
+    <entry file="file://$PROJECT_DIR$/src/server/manager/MessageManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
-          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3914">
-          <caret line="212" column="20" lean-forward="false" selection-start-line="212" selection-start-column="20" selection-end-line="212" selection-end-column="20" />
+          <caret line="35" column="73" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="73" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
-            <element signature="e#443#444#0" expanded="false" />
-            <element signature="e#6755#6756#0" expanded="false" />
-            <element signature="e#6817#6818#0" expanded="false" />
-            <marker date="1494566358421" expanded="true" signature="1077:1124" ph="insert into conn... " />
-            <marker date="1494566358421" expanded="true" signature="1800:1857" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="1800:1858" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="1800:1871" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2420" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2427" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2428" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="3091:3125" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3091:3126" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3091:3174" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3759:3830" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="5130:5167" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5130:5168" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5130:5186" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5583:5620" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="6010:6042" ph="select * fro... conn" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/FakePhoneController.java">
+    <entry file="file://$PROJECT_DIR$/src/server/controller/RealPhoneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="1558">
+          <caret line="91" column="22" lean-forward="false" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/Util.java">
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+        <state relative-caret-position="95">
+          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/web/WEB-INF/server-config.wsdd">
+    <entry file="file://$PROJECT_DIR$/src/server/dao/ChangeDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="38" column="5" lean-forward="false" selection-start-line="22" selection-start-column="71" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="2052">
+          <caret line="112" column="13" lean-forward="false" selection-start-line="112" selection-start-column="13" selection-end-line="112" selection-end-column="13" />
           <folding>
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#7227#7228#0" expanded="true" />
+            <element signature="e#7289#7290#0" expanded="true" />
+            <marker date="1495913068583" expanded="true" signature="1020:1076" ph="insert into conn... " />
+            <marker date="1495913068583" expanded="true" signature="1877:1948" ph="update conn " />
+            <marker date="1495913068583" expanded="true" signature="2430:2466" ph="update conn " />
+            <marker date="1495913068583" expanded="true" signature="3191:3281" ph="delete from " />
+            <marker date="1495913068583" expanded="true" signature="3191:3296" ph="delete from " />
+            <marker date="1495913068583" expanded="true" signature="3789:3860" ph="update conn " />
+            <marker date="1495913068583" expanded="true" signature="5633:5689" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6067:6104" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6067:6105" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6067:6123" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6501:6533" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6501:6534" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6501:6547" ph="select * fro... conn" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone Protocol">
+    <entry file="file://$PROJECT_DIR$/src/server/controller/FakePhoneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/manager/MessageManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
-          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3914">
-          <caret line="212" column="20" lean-forward="false" selection-start-line="212" selection-start-column="20" selection-end-line="212" selection-end-column="20" />
+          <caret line="35" column="73" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="73" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
-            <element signature="e#443#444#0" expanded="false" />
-            <element signature="e#6755#6756#0" expanded="false" />
-            <element signature="e#6817#6818#0" expanded="false" />
-            <marker date="1494566358421" expanded="true" signature="1077:1124" ph="insert into conn... " />
-            <marker date="1494566358421" expanded="true" signature="1800:1857" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="1800:1858" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="1800:1871" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2420" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2427" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2428" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="3091:3125" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3091:3126" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3091:3174" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3759:3830" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="5130:5167" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5130:5168" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5130:5186" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5583:5620" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="6010:6042" ph="select * fro... conn" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/FakePhoneController.java">
+    <entry file="file://$PROJECT_DIR$/src/server/dao/ChangeDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/web/WEB-INF/server-config.wsdd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="38" column="5" lean-forward="false" selection-start-line="22" selection-start-column="71" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="2242">
+          <caret line="122" column="22" lean-forward="false" selection-start-line="122" selection-start-column="22" selection-end-line="122" selection-end-column="22" />
           <folding>
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#7227#7228#0" expanded="true" />
+            <element signature="e#7289#7290#0" expanded="true" />
+            <marker date="1495913068583" expanded="true" signature="1020:1076" ph="insert into conn... " />
+            <marker date="1495913068583" expanded="true" signature="1877:1948" ph="update conn " />
+            <marker date="1495913068583" expanded="true" signature="2430:2466" ph="update conn " />
+            <marker date="1495913068583" expanded="true" signature="3191:3281" ph="delete from " />
+            <marker date="1495913068583" expanded="true" signature="3191:3296" ph="delete from " />
+            <marker date="1495913068583" expanded="true" signature="3789:3860" ph="update conn " />
+            <marker date="1495913068583" expanded="true" signature="5633:5689" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6067:6104" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6067:6105" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6067:6123" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6501:6533" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6501:6534" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6501:6547" ph="select * fro... conn" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone Protocol">
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/controller/RealPhoneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="77" column="5" lean-forward="true" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/controller/FakePhoneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/manager/MessageManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
-          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3914">
-          <caret line="212" column="20" lean-forward="false" selection-start-line="212" selection-start-column="20" selection-end-line="212" selection-end-column="20" />
+          <caret line="35" column="73" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="73" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
-            <element signature="e#443#444#0" expanded="false" />
-            <element signature="e#6755#6756#0" expanded="false" />
-            <element signature="e#6817#6818#0" expanded="false" />
-            <marker date="1494566358421" expanded="true" signature="1077:1124" ph="insert into conn... " />
-            <marker date="1494566358421" expanded="true" signature="1800:1857" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="1800:1858" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="1800:1871" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2420" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2427" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2428" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="3091:3125" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3091:3126" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3091:3174" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3759:3830" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="5130:5167" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5130:5168" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5130:5186" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5583:5620" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="6010:6042" ph="select * fro... conn" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/FakePhoneController.java">
+    <entry file="file://$PROJECT_DIR$/src/server/dao/ChangeDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/web/WEB-INF/server-config.wsdd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="38" column="5" lean-forward="false" selection-start-line="22" selection-start-column="71" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="2242">
+          <caret line="122" column="22" lean-forward="false" selection-start-line="122" selection-start-column="22" selection-end-line="122" selection-end-column="22" />
           <folding>
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#7227#7228#0" expanded="true" />
+            <element signature="e#7289#7290#0" expanded="true" />
+            <marker date="1495913068583" expanded="true" signature="1020:1076" ph="insert into conn... " />
+            <marker date="1495913068583" expanded="true" signature="1877:1948" ph="update conn " />
+            <marker date="1495913068583" expanded="true" signature="2430:2466" ph="update conn " />
+            <marker date="1495913068583" expanded="true" signature="3191:3281" ph="delete from " />
+            <marker date="1495913068583" expanded="true" signature="3191:3296" ph="delete from " />
+            <marker date="1495913068583" expanded="true" signature="3789:3860" ph="update conn " />
+            <marker date="1495913068583" expanded="true" signature="5633:5689" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6067:6104" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6067:6105" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6067:6123" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6501:6533" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6501:6534" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6501:6547" ph="select * fro... conn" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone Protocol">
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/controller/RealPhoneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1558">
+          <caret line="91" column="50" lean-forward="false" selection-start-line="91" selection-start-column="50" selection-end-line="91" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/controller/FakePhoneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/manager/MessageManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3914">
-          <caret line="212" column="20" lean-forward="false" selection-start-line="212" selection-start-column="20" selection-end-line="212" selection-end-column="20" />
+          <caret line="35" column="73" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="73" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
-            <element signature="e#443#444#0" expanded="false" />
-            <element signature="e#6755#6756#0" expanded="false" />
-            <element signature="e#6817#6818#0" expanded="false" />
-            <marker date="1494566358421" expanded="true" signature="1077:1124" ph="insert into conn... " />
-            <marker date="1494566358421" expanded="true" signature="1800:1857" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="1800:1858" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="1800:1871" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2420" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2427" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2428" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="3091:3125" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3091:3126" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3091:3174" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3759:3830" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="5130:5167" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5130:5168" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5130:5186" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5583:5620" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="6010:6042" ph="select * fro... conn" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/FakePhoneController.java">
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="31" />
+        <state relative-caret-position="95">
+          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/Util.java">
+    <entry file="file://$PROJECT_DIR$/src/server/controller/RealPhoneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="437">
+          <caret line="32" column="67" lean-forward="false" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/FakePhoneController.java">
+    <entry file="file://$PROJECT_DIR$/src/server/controller/FakePhoneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="152">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding>
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone Protocol">
+    <entry file="file://$PROJECT_DIR$/src/server/manager/MessageManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="56" column="33" lean-forward="true" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3914">
-          <caret line="212" column="20" lean-forward="false" selection-start-line="212" selection-start-column="20" selection-end-line="212" selection-end-column="20" />
+        <state relative-caret-position="551">
+          <caret line="35" column="73" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="73" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
-            <element signature="e#443#444#0" expanded="false" />
-            <element signature="e#6755#6756#0" expanded="false" />
-            <element signature="e#6817#6818#0" expanded="false" />
-            <marker date="1494566358421" expanded="true" signature="1077:1124" ph="insert into conn... " />
-            <marker date="1494566358421" expanded="true" signature="1800:1857" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="1800:1858" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="1800:1871" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2420" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2427" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2428" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="3091:3125" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3091:3126" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3091:3174" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3759:3830" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="5130:5167" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5130:5168" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5130:5186" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5583:5620" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="6010:6042" ph="select * fro... conn" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/web/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/server/controller/RealPhoneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        <state relative-caret-position="684">
+          <caret line="45" column="46" lean-forward="true" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/model/Conn.java">
+    <entry file="file://$PROJECT_DIR$/src/server/controller/FakePhoneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/model/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="152">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding>
-            <element signature="e#214#215#0" expanded="false" />
-            <element signature="e#241#242#0" expanded="false" />
-            <element signature="e#281#282#0" expanded="false" />
-            <element signature="e#313#314#0" expanded="false" />
-            <element signature="e#345#346#0" expanded="false" />
-            <element signature="e#373#374#0" expanded="false" />
-            <element signature="e#415#416#0" expanded="false" />
-            <element signature="e#449#450#0" expanded="false" />
-            <element signature="e#483#484#0" expanded="false" />
-            <element signature="e#513#514#0" expanded="false" />
-            <element signature="e#559#560#0" expanded="false" />
-            <element signature="e#597#598#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/web/WEB-INF/server-config.wsdd">
+    <entry file="file://$PROJECT_DIR$/src/server/manager/MessageManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/FakePhoneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone Protocol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/dao/ChangeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2869">
-          <caret line="157" column="56" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+        <state relative-caret-position="551">
+          <caret line="35" column="73" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="73" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
-            <element signature="e#443#444#0" expanded="false" />
-            <element signature="e#6755#6756#0" expanded="false" />
-            <element signature="e#6817#6818#0" expanded="false" />
-            <marker date="1494566358421" expanded="true" signature="1077:1124" ph="insert into conn... " />
-            <marker date="1494566358421" expanded="true" signature="1800:1857" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="1800:1858" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="1800:1871" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2420" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2427" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="2391:2428" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="3091:3125" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3091:3126" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3091:3174" ph="delete from " />
-            <marker date="1494566358421" expanded="true" signature="3759:3830" ph="update conn " />
-            <marker date="1494566358421" expanded="true" signature="5130:5167" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5130:5168" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5130:5186" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="5583:5620" ph="select * fro... conn" />
-            <marker date="1494566358421" expanded="true" signature="6010:6042" ph="select * fro... conn" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/MessageManager.java">
+    <entry file="file://$PROJECT_DIR$/src/server/controller/RealPhoneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+        <state relative-caret-position="589">
+          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/javax.servlet.jar!/javax/servlet/http/HttpServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="39" column="175" lean-forward="false" selection-start-line="39" selection-start-column="175" selection-end-line="39" selection-end-column="175" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/model/Conn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="40" column="38" lean-forward="true" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
           <folding>
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FaikPhone-Server/src/com/faikphone/server/controller/RealPhoneController.java">
+    <entry file="file://$PROJECT_DIR$/src/server/dao/ChangeDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="72" column="68" lean-forward="false" selection-start-line="72" selection-start-column="68" selection-end-line="72" selection-end-column="68" />
+        <state relative-caret-position="108">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding>
+            <element signature="e#7227#7228#0" expanded="true" />
+            <element signature="e#7289#7290#0" expanded="true" />
+            <marker date="1495913068583" expanded="true" signature="1020:1076" ph="insert into conn... " />
+            <marker date="1495913068583" expanded="true" signature="1877:1948" ph="update conn " />
+            <marker date="1495913068583" expanded="true" signature="2430:2466" ph="update conn " />
+            <marker date="1495913068583" expanded="true" signature="3191:3281" ph="delete from " />
+            <marker date="1495913068583" expanded="true" signature="3191:3296" ph="delete from " />
+            <marker date="1495913068583" expanded="true" signature="3789:3860" ph="update conn " />
+            <marker date="1495913068583" expanded="true" signature="5633:5689" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6067:6104" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6067:6105" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6067:6123" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6501:6533" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6501:6534" ph="select * fro... conn" />
+            <marker date="1495913068583" expanded="true" signature="6501:6547" ph="select * fro... conn" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/manager/HttpClientManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/controller/FakePhoneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="49" column="42" lean-forward="true" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/manager/MessageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="26" column="62" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="62" />
+          <folding>
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/controller/RealPhoneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1624,7 +1255,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>FaikPhone-Server:war exploded</last-edited>
+          <last-edited>TestServer:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1672,7 +1303,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>FaikPhone-Server</last-edited>
+          <last-edited>TestServer</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

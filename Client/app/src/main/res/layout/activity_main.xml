@@ -18,24 +18,12 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="13dp">
 
-        <TextView
-            android:id="@+id/title"
+        <Button
+            android:id="@+id/startBtn"
+            android:text="앱 가리기"
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Connection Log"
-            android:textSize="30sp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <EditText
-            android:id="@+id/connectionLog"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:ems="10"
-            android:gravity="bottom"
-            android:inputType="textMultiLine"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 </RelativeLayout>

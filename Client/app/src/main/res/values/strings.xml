@@ -24,12 +24,15 @@
     <string name="pref_connection_dialog_fake">코드 입력</string>
 
     <string name="pref_code_refresh_real">인증 코드 재발급</string>
-    <string name="pref_refresh_fake">연결 끊기</string>
+    <string name="pref_disconnect_fake">연결 끊기</string>
+    <string name="pref_disconnect_real">공기계 연결 끊기</string>
 
     <string name="pref_statusbar_view">상단바 위장 적용 여부</string>
 
     <string name="refresh_alert_real">정말로 인증 코드를 재발급받으시겠습니까?</string>
-    <string name="refresh_alert_fake">정말로 연결을 끊으시겠습니까?</string>
+    <string name="refresh_alert_fake">정말로 연결을 끊으시겠습니까? </string>
+    
+    <string name="check_connection_status">연결 상태 체크</string>
     
     <string name="preferences_changed_broadcast">com.faikphone.client.PREFERENCES_CHANGED_BROADCAST</string>
 </resources>

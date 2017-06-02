@@ -11,18 +11,27 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.faikphone.client.R;
 import com.faikphone.client.application.FaikPhoneApplication;
+import com.faikphone.client.network.RealHttpClient;
 import com.faikphone.client.service.FakeStatusBarService;
 import com.faikphone.client.utils.AppPreferences;
+import com.google.firebase.iid.FirebaseInstanceId;
 
-public class MainActivity extends AppCompatActivity {
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class MainActivity extends AppCompatActivity  {
 
     private static final int REQUEST_MANAGE_OVERLAY_PERMISSION = 11;
     private static final int PERMISSIONS_REQUEST_READ_PHONE_STATE = 21;
@@ -30,11 +39,14 @@ public class MainActivity extends AppCompatActivity {
     private static final int PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 23;
 
     private AppPreferences appPreferences;
-
+    private Button startBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        startBtn = (Button) findViewById(R.id.startBtn);
+
+        startBtn.setOnClickListener(event -> onStartBtnClicked(event));
 
         if (checkDrawOverlayPermission()) {
             startService(new Intent(this, FakeStatusBarService.class));
@@ -49,7 +61,19 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setTitle("FaikPhone(Fake Mode)");
         } else {  // realPhone
             getSupportActionBar().setTitle("FaikPhone(Real Mode)");
+            if(appPreferences.getKeyDevicePhoneNumber() == null) {
+                TelephonyManager telephonyManager = (TelephonyManager) getApplicationContext().getSystemService(getApplicationContext().TELEPHONY_SERVICE);
+                appPreferences.setKeyDevicePhoneNumber(telephonyManager.getLine1Number());
+            }
         }
+    }
+
+    private void onStartBtnClicked(View event) {
+        Intent startMain = new Intent(Intent.ACTION_MAIN);
+        startMain.addCategory(Intent.CATEGORY_HOME);
+        startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        getApplicationContext().startActivity(startMain);
+        Toast.makeText(getApplicationContext(), "설정을 하려면 앱을 다시 실행하시면 됩니다.", Toast.LENGTH_SHORT).show();
     }
 
     @Override

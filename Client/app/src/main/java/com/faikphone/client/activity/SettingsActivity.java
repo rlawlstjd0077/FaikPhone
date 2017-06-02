@@ -86,13 +86,17 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
 
         EditTextPreference fakeConnectionPreference;
 
-        Preference fakeRefreshPreference;
+        Preference fakeDisconnectPreference;
 
         SwitchPreference fakeChangeBarPreference;
 
         Preference realCodeViewPreference;
 
         Preference realCodeRefreshPreference;
+
+        Preference fakeCheckConnectionPreference;
+
+        Preference realDisconnectPreference;
 
         @RequiresApi(api = Build.VERSION_CODES.M)
         @Override
@@ -103,6 +107,7 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
             addPreferencesFromResource(R.xml.pref_general);
             setHasOptionsMenu(true);
 
+            isFake = mAppPrefs.getPhoneMode();
             switchModeReference = (SwitchPreference) findPreference("fake_switch");
             switchModeReference.setOnPreferenceChangeListener(fakeSwitchChangeListener);
             switchModeReference.setChecked(mAppPrefs.getPhoneMode());
@@ -112,21 +117,30 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
             // Fake Preferences
             fakeConnectionPreference = (EditTextPreference)findPreference("fake_connection");
             fakeConnectionPreference.setOnPreferenceChangeListener(fakeConnectionChangeListener);
+            fakeConnectionPreference.setOnPreferenceClickListener(fakeConnectionClickListener);
 
-            fakeRefreshPreference = findPreference("fake_refresh");
-            fakeRefreshPreference.setOnPreferenceClickListener(fakeRefreshClickListener);
+            fakeDisconnectPreference = findPreference("fake_disconnect");
+            fakeDisconnectPreference.setOnPreferenceClickListener(fakeRefreshClickListener);
 
             fakeChangeBarPreference = (SwitchPreference) findPreference("fake_statusbar");
             fakeChangeBarPreference.setOnPreferenceChangeListener(fakeChangeBarChangeListener);
             fakeChangeBarPreference.setChecked(mAppPrefs.isFakeStatusBarMode());
 
-            //Real Preferences
+            fakeCheckConnectionPreference = findPreference("fake_check_connection");
+            fakeCheckConnectionPreference.setOnPreferenceClickListener(fakeClickedCheckConnectionListener);
+
+                    //Real Preferences
+
+
 
             realCodeViewPreference = findPreference("real_code_view");
             realCodeViewPreference.setOnPreferenceClickListener(realCodeVIewListener);
 
             realCodeRefreshPreference = findPreference("real_code_refresh");
             realCodeRefreshPreference.setOnPreferenceClickListener(realCodeRefreshListener);
+
+            realDisconnectPreference = findPreference("real_disconnect");
+            realDisconnectPreference.setOnPreferenceClickListener(realDisconnectListener);
 
             ChangePreferences();
         }
@@ -143,16 +157,33 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
 
         private Preference.OnPreferenceChangeListener fakeSwitchChangeListener = new Preference.OnPreferenceChangeListener() {
             @Override
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                // TODO: 공기계 -> 본 핸드폰, 또는 그 반대 모드로 넘어갈 때 이전의 기기와의 연결을 끊기
-
-                // if(job is done){
-                isFake = (boolean) newValue;
-                mAppPrefs.setPhoneMode(isFake);
-                ChangePreferences();
-                // }
-                getActivity().sendBroadcast(new Intent(getString(R.string.preferences_changed_broadcast)));
-
+            public boolean onPreferenceChange(Preference preference, final Object newValue) {
+//
+                new AlertDialog.Builder(getActivity()).setMessage("Mode를 변경하시면 연결된 데이터는 모두 초기화 됩니다. 변경하시겠습니까?")
+                        .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                // TODO: 공기계 -> 본 핸드폰, 또는 그 반대 모드로 넘어갈 때 이전의 기기와의 연결을 끊기
+                                if((Boolean) newValue){
+                                    httpClient.doResetAll(FirebaseInstanceId.getInstance().getToken());
+                                }else{
+                                    httpClient.doResetConnection(FirebaseInstanceId.getInstance().getToken());
+                                }
+                                isFake = (boolean) newValue;
+                                mAppPrefs.setPhoneMode(isFake);
+                                ChangePreferences();
+                                getActivity().sendBroadcast(new Intent(getString(R.string.preferences_changed_broadcast)));
+                                fakeChangeBarPreference.setChecked((Boolean) newValue);
+                            }
+                        })
+                        .setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                fakeChangeBarPreference.setChecked(!(Boolean) newValue);
+                            }
+                        })
+                        .show();
+                fakeChangeBarPreference.setChecked(!(Boolean) newValue);
                 return true;
             }
         };
@@ -161,12 +192,11 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
             @Override
             public boolean onPreferenceClick(Preference preference) {
                 String message = getResources().getString(R.string.refresh_alert_fake);
-
                 new AlertDialog.Builder(getActivity()).setMessage(message)
                         .setPositiveButton("확인", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                RefreshConnection();
+                                RefreshConnection(FirebaseInstanceId.getInstance().getToken());
                             }
                         })
                         .setNegativeButton("취소", null)
@@ -174,12 +204,37 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
                 return true;
             }
         };
+        private EditTextPreference.OnPreferenceClickListener fakeConnectionClickListener = new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                fakeConnectionPreference.setDialogTitle(R.string.pref_connection_dialog_fake);
+                if(mAppPrefs.getKeyRealPhoneNum() != null) {
+                        new AlertDialog.Builder(getActivity()).setMessage("이미 연결 되어 있는 디바이스 입니다. 다른 기기에 연결하시겠습니까? ")
+                                .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        //TODO 연결 끊어야 함
+                                        fakeConnectionPreference.getDialog().show();
+                                    }
+                                })
+                                .setNegativeButton("취소", null)
+                                .show();
+                }
+                fakeConnectionPreference.getDialog().hide();
+                return false;
+            }
+        };
+
         private EditTextPreference.OnPreferenceChangeListener fakeConnectionChangeListener = new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
-                fakeConnectionPreference.setDialogTitle(R.string.pref_connection_dialog_fake);
-                httpClient.doRegister(FirebaseInstanceId.getInstance().getToken(), "R2T1R9H47VRN");
-                Toast.makeText(getActivity(), "연결에 성공했습니다.", Toast.LENGTH_SHORT).show();
+                //TODO 테스트 시에만 고정 토큰 넣어줌
+                httpClient.doFakeRegister(FirebaseInstanceId.getInstance().getToken(), "1QEE3R8WBM6F");
+                if(mAppPrefs.getKeyRealPhoneNum() != null) {
+                    Toast.makeText(getActivity(), "연결에 성공했습니다.", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getActivity(), "연결에 실패했습니다.", Toast.LENGTH_SHORT).show();
+                }
                 return true;
             }
         };
@@ -193,12 +248,38 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
             }
         };
 
+        private Preference.OnPreferenceClickListener fakeClickedCheckConnectionListener = new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                //TODO Server에 상태 체크 오청 보내기
+                HttpClient httpClient = new FakeHttpClient(getActivity());
+                httpClient.doCheckConnection(FirebaseInstanceId.getInstance().getToken());
+                String phoneNum;
+
+                if((phoneNum= mAppPrefs.getKeyRealPhoneNum()) == null){
+                    Toast.makeText(getActivity(), "연결되어 있지 않습니다.", Toast.LENGTH_SHORT).show();
+                    return false;
+                }
+
+                new AlertDialog.Builder(getActivity()).setMessage("연결된 기기 : " + phoneNum)
+                        .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        })
+                        .show();
+
+                return true;
+            }
+        };
+
         private Preference.OnPreferenceClickListener realCodeVIewListener = new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                String code = null;
+                HttpClient httpClient = new RealHttpClient(getActivity());
+                String code;
                 if((code = mAppPrefs.getKeyCode()) == null){
-                    httpClient.doRegister(FirebaseInstanceId.getInstance().getToken());
+                    httpClient.doRealRegister(FirebaseInstanceId.getInstance().getToken(), mAppPrefs.getKeyDevicePhoneNumber());
                     code = mAppPrefs.getKeyCode();
                 }
                 if(code==null){
@@ -209,7 +290,6 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
                         .setPositiveButton("확인", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                RefreshConnection();
                             }
                         })
                         .show();
@@ -220,9 +300,9 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
         private Preference.OnPreferenceClickListener realCodeRefreshListener = new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                String code = null;
-                if((code = mAppPrefs.getKeyCode()) == null){
-                    Toast.makeText(getActivity(), "등록되지 않은 기기 입니다. 등록해주세요", Toast.LENGTH_SHORT).show();
+                String code;
+                if((mAppPrefs.getKeyCode()) == null){
+                    Toast.makeText(getActivity(), "등록되지 않은 기기 입니다. 인증 코드를 발급해주세요.", Toast.LENGTH_SHORT).show();
                     return true;
                 }
 
@@ -237,7 +317,22 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
                         .setPositiveButton("확인", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                RefreshConnection();
+                            }
+                        })
+                        .show();
+                return true;
+            }
+        };
+
+        private Preference.OnPreferenceClickListener realDisconnectListener = new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                String message = getResources().getString(R.string.refresh_alert_fake);
+                new AlertDialog.Builder(getActivity()).setMessage(message)
+                        .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                RefreshConnection(FirebaseInstanceId.getInstance().getToken());
                             }
                         })
                         .setNegativeButton("취소", null)
@@ -246,31 +341,32 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
             }
         };
 
+
+
         private void ChangePreferences(){
             if(isFake){
+                prefer_screen.removePreference(realDisconnectPreference);
                 prefer_screen.removePreference(realCodeViewPreference);
                 prefer_screen.removePreference(realCodeRefreshPreference);
                 prefer_screen.addPreference(fakeConnectionPreference);
-                prefer_screen.addPreference(fakeRefreshPreference);
+                prefer_screen.addPreference(fakeDisconnectPreference);
                 prefer_screen.addPreference(fakeChangeBarPreference);
+                prefer_screen.addPreference(fakeCheckConnectionPreference);
                 httpClient = new FakeHttpClient(getActivity());
-
             }else{
+                prefer_screen.removePreference(fakeCheckConnectionPreference);
                 prefer_screen.removePreference(fakeConnectionPreference);
-                prefer_screen.removePreference(fakeRefreshPreference);
+                prefer_screen.removePreference(fakeDisconnectPreference);
                 prefer_screen.removePreference(fakeChangeBarPreference);
                 prefer_screen.addPreference(realCodeViewPreference);
                 prefer_screen.addPreference(realCodeRefreshPreference);
+                prefer_screen.addPreference(realDisconnectPreference);
                 httpClient = new RealHttpClient(getActivity());
             }
         }
 
-        private void RefreshConnection(){
-            if(isFake){
-                // TODO: 연결 끊기 작업 수행
-            }else{
-                // TODO: 인증 코드 재발급 작업 수행
-            }
+        private void RefreshConnection(String token){
+                httpClient.doResetConnection(token);
         }
     }
 }

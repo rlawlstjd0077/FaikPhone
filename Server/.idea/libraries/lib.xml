@@ -1,18 +1,8 @@
 <component name="libraryTable">
   <library name="lib">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/FaikPhone-Server/lib/jaxrpc.jar!/" />
-      <root url="jar://$PROJECT_DIR$/FaikPhone-Server/lib/axis.jar!/" />
-      <root url="jar://$PROJECT_DIR$/FaikPhone-Server/lib/mysql-connector-java-5.1.41-bin.jar!/" />
-      <root url="jar://$PROJECT_DIR$/FaikPhone-Server/lib/commons-logging-1.0.4.jar!/" />
-      <root url="jar://$PROJECT_DIR$/FaikPhone-Server/lib/log4j-1.2.8.jar!/" />
-      <root url="jar://$PROJECT_DIR$/FaikPhone-Server/lib/wsdl4j-1.5.1.jar!/" />
-      <root url="jar://$PROJECT_DIR$/FaikPhone-Server/lib/json-20140107.jar!/" />
-      <root url="jar://$PROJECT_DIR$/FaikPhone-Server/lib/saaj.jar!/" />
-      <root url="jar://$PROJECT_DIR$/FaikPhone-Server/lib/commons-discovery-0.2.jar!/" />
-      <root url="jar://$PROJECT_DIR$/FaikPhone-Server/lib/okhttp-3.6.0.jar!/" />
-      <root url="jar://$PROJECT_DIR$/FaikPhone-Server/lib/okio-1.9.0.jar!/" />
-      <root url="jar://$PROJECT_DIR$/FaikPhone-Server/lib/gson-2.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/out/artifacts/TestServer_war_exploded/WEB-INF/lib/json-20140107.jar!/" />
+      <root url="jar://$PROJECT_DIR$/out/artifacts/TestServer_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.41-bin.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

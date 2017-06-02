@@ -62,7 +62,7 @@ public class ResponseHandler {
             switch (response.getType()){
                 case "send_message_response" :
                     if(response.getState()){
-                        logger.write("메시지 전송 성공");
+                        preferences.setKeyCode(response.getMessage());
                     }else{
                         logger.write("메시지 전송 실패");
                     }
@@ -70,6 +70,7 @@ public class ResponseHandler {
                 case "register_response":
                     if(response.getState()){
                         logger.write("메시지 전송 성공");
+                        preferences.setRealPhoneNum(response.getMessage());
                     }else{
                         logger.write("메시지 전송 실패");
                     }

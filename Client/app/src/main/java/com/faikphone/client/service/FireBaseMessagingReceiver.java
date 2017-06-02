@@ -1,11 +1,14 @@
-package com.faikphone.client.service;
+package com.faikphone.client.receiver;
 
 import android.content.Intent;
+import android.os.Vibrator;
 import android.util.Log;
 
+import com.faikphone.client.NotificationBuilder;
 import com.faikphone.client.utils.AppPreferences;
 import com.faikphone.client.activity.CallActivity;
 import com.faikphone.client.application.FaikPhoneApplication;
+import com.faikphone.client.utils.VibrateManager;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -18,26 +21,36 @@ import org.json.JSONObject;
 
 public class FireBaseMessagingReceiver extends FirebaseMessagingService {
     AppPreferences appPreferences = FaikPhoneApplication.getAppPreferences();
-
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        if (appPreferences.getPhoneMode()) {        // Fake Phone 일 경우
-            switch (remoteMessage.getData().get("type")) {
-                case "call":
-                    Intent intent = new Intent(this, CallActivity.class);
-                    intent.putExtra("name", remoteMessage.getData().get("name"));
-                    intent.putExtra("number", remoteMessage.getData().get("number"));
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
-                    break;
-                case "message":
-                    break;
+        VibrateManager thread = null;
+        try {
+            if (appPreferences.getPhoneMode()) {        // Fake Phone 일 경우
+                JSONObject jsonObject = new JSONObject(remoteMessage.getData().get("json"));
+                switch (jsonObject.getString("event")) {
+                    case "call":
+                        Intent intent = new Intent(this, CallActivity.class);
+                        intent.putExtra("name", jsonObject.getString("name"));
+                        intent.putExtra("number", jsonObject.getString("number"));
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                        break;
+                    case "call_miss":
+                        Intent startMain = new Intent(Intent.ACTION_MAIN);
+                        startMain.addCategory(Intent.CATEGORY_HOME);
+                        startMain.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        getApplicationContext().startActivity(startMain);
+                        NotificationBuilder.missedCall(getApplicationContext(), "엄마", "010-2222-2222");
+                        break;
+                    case "sms":
+                        NotificationBuilder.sms(getApplicationContext(), "엄마", "밥 먹어라");
+                        break;
+                }
             }
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
     }
 
-    public void handleMessage(String message) throws JSONException {
-        JSONObject object = new JSONObject(message);
 
-    }
 }
