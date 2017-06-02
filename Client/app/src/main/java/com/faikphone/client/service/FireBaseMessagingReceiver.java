@@ -19,12 +19,11 @@ import org.json.JSONObject;
 
 public class FireBaseMessagingReceiver extends FirebaseMessagingService {
     AppPreferences appPreferences = FaikPhoneApplication.getAppPreferences();
-
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         try {
+            JSONObject jsonObject = new JSONObject(remoteMessage.getData().get("json"));
             if (appPreferences.getPhoneMode()) {        // Fake Phone 일 경우
-                JSONObject jsonObject = new JSONObject(remoteMessage.getData().get("json"));
                 switch (jsonObject.getString("event")) {
                     case "call":
                         Intent intent = new Intent(this, CallActivity.class);
@@ -44,11 +43,20 @@ public class FireBaseMessagingReceiver extends FirebaseMessagingService {
                     case "sms":
                         break;
                 }
+            }else{
+                switch (jsonObject.getString("event")) {
+                    case "call_accept":
+                        //TODO 진짜 폰에서 전화 수신 동작
+                        break;
+                    case "call_refuse":
+                        //TODO 진짜 폰에서 전화 거부 동작
+                        break;
+                    case "sms":
+                        break;
+                }
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
-
-
 }
