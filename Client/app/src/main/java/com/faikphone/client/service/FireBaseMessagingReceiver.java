@@ -47,23 +47,11 @@ public class FireBaseMessagingReceiver extends FirebaseMessagingService {
                     case "sms":
                         break;
                 }
-            }else{
-                switch (jsonObject.getString("event")) {
-                    case "call_accept":
-                        //TODO 진짜 폰에서 전화 수신 동작
-                        break;
-                    case "call_refuse":
-                        //TODO 진짜 폰에서 전화 거부 동작
-                        break;
-                    case "sms":
-                        break;
-                }
             } else {
-                JSONObject jsonObject = new JSONObject(remoteMessage.getData().get("json"));
                     switch (jsonObject.getString("event")) {
-                    case "receive":
+                    case "call_receive":
                         break;
-                    case "refusal":
+                    case "call_refusal":
                         try {
                             TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
                             Class<?> c = Class.forName(tm.getClass().getName());
