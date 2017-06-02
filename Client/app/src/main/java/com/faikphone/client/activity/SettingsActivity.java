@@ -173,17 +173,17 @@ public  class SettingsActivity extends AppCompatPreferenceActivity {
                                 mAppPrefs.setPhoneMode(isFake);
                                 ChangePreferences();
                                 getActivity().sendBroadcast(new Intent(getString(R.string.preferences_changed_broadcast)));
-                                fakeChangeBarPreference.setChecked((Boolean) newValue);
+                                switchModeReference.setChecked((Boolean) newValue);
                             }
                         })
                         .setNegativeButton("취소", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                fakeChangeBarPreference.setChecked(!(Boolean) newValue);
+                                switchModeReference.setChecked(!(Boolean) newValue);
                             }
                         })
                         .show();
-                fakeChangeBarPreference.setChecked(!(Boolean) newValue);
+//                fakeChangeBarPreference.setChecked(!(Boolean) newValue);
                 return true;
             }
         };

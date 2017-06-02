@@ -20,7 +20,7 @@ import okhttp3.Request;
 
 public class FakeHttpClient extends HttpClient{
 //    private String url = "http://192.168.137.253:8999/fake.do";
-    private String url = "http://192.168.0.108:8080/fake.do";
+    private String url = "http://10.156.145.157:8080/fake.do";
 
     public FakeHttpClient(Context context){
         client = new OkHttpClient();
@@ -42,12 +42,6 @@ public class FakeHttpClient extends HttpClient{
     @Override
     public void doSendMessage(JSONObject msg, String token) throws JSONException {
         HttpUrl.Builder urlBuilder = createBuilder("send_message", token);
-//        Iterator<String> keys = msg.keys();
-//        while (keys.hasNext()) {
-//            String key = keys.next();
-//            String value = msg.getString(key);
-//            urlBuilder.addQueryParameter(key, value);
-//        }
         final Request request = getRequest(urlBuilder, msg.toString());
         doRequest(request, true);
     }
@@ -58,9 +52,6 @@ public class FakeHttpClient extends HttpClient{
 
     @Override
     public void doResetAll(String token) {
-        HttpUrl.Builder urlBuilder = createBuilder("reset_all", token);
-        final Request request = getRequest(urlBuilder, "");
-        doRequest(request, true);
     }
 
     @Override
