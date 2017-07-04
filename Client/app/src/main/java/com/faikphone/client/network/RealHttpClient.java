@@ -8,12 +8,9 @@ import com.faikphone.client.data.ResponseHandler;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Iterator;
-
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.RequestBody;
 
 
 /**
@@ -21,7 +18,7 @@ import okhttp3.RequestBody;
  */
 
 public class RealHttpClient extends HttpClient{
-    private String url = "http://10.156.145.157:8080/real.do";
+    private String url = "http://192.168.43.95:8080/real.do";
 //    private String url = "http://10.156.145.157:9000/real.do";
 
     public RealHttpClient(Context context) {
@@ -37,7 +34,7 @@ public class RealHttpClient extends HttpClient{
     public void doRealRegister(String token, String phoneNum) {
         HttpUrl.Builder urlBuilder = createBuilder("register", token);
         urlBuilder.addQueryParameter("pnum", phoneNum);
-        final Request request = getRequest(urlBuilder, null);
+        final Request request = getRequest(urlBuilder, "");
         doRequest(request, false);
     }
 
@@ -52,7 +49,7 @@ public class RealHttpClient extends HttpClient{
 
     @Override
     public void doResetConnection(String token) {
-        HttpUrl.Builder urlBuilder = createBuilder("reset_conn", "");
+        HttpUrl.Builder urlBuilder = createBuilder("reset_conn", token);
         final Request request = getRequest(urlBuilder, "");
         doRequest(request, false);
     }
@@ -63,15 +60,15 @@ public class RealHttpClient extends HttpClient{
 
     @Override
     public void doResetCode(String token) {
-        HttpUrl.Builder urlBuilder = createBuilder("reset_code", "");
-        final Request request = getRequest(urlBuilder, null);
+        HttpUrl.Builder urlBuilder = createBuilder("reset_code", token);
+        final Request request = getRequest(urlBuilder, "");
         doRequest(request, false);
     }
 
     @Override
     public void doResetAll(String token) {
-        HttpUrl.Builder urlBuilder = createBuilder("reset_all", "");
-        final Request request = getRequest(urlBuilder, null);
+        HttpUrl.Builder urlBuilder = createBuilder("reset_all", token);
+        final Request request = getRequest(urlBuilder, "");
         doRequest(request, false);
     }
 

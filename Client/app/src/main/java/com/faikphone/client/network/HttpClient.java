@@ -1,7 +1,5 @@
 package com.faikphone.client.network;
 
-import android.util.Log;
-
 import com.faikphone.client.Requester;
 import com.faikphone.client.data.Response;
 import com.faikphone.client.data.ResponseHandler;
@@ -9,9 +7,6 @@ import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.Iterator;
-import java.util.List;
 
 import okhttp3.HttpUrl;
 import okhttp3.MediaType;
@@ -62,4 +57,3 @@ public abstract class HttpClient {
 
     public abstract HttpUrl.Builder createBuilder(String type, String token);
 }
-

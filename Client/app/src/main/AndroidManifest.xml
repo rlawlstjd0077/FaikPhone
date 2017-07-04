@@ -12,6 +12,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.provider.Telephony.SMS_RECEIVED" />
 
     <application
         android:allowBackup="true"
@@ -28,6 +31,11 @@
         <receiver android:name=".receiver.CallReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.SMSReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
         <activity android:name=".activity.MainActivity">

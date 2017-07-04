@@ -2,13 +2,10 @@ package com.faikphone.client.network;
 
 import android.content.Context;
 
-import com.faikphone.client.data.Response;
 import com.faikphone.client.data.ResponseHandler;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.Iterator;
 
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
@@ -20,7 +17,7 @@ import okhttp3.Request;
 
 public class FakeHttpClient extends HttpClient{
 //    private String url = "http://192.168.137.253:8999/fake.do";
-    private String url = "http://10.156.145.157:8080/fake.do";
+    private String url = "http://192.168.43.95:8080/fake.do";
 
     public FakeHttpClient(Context context){
         client = new OkHttpClient();

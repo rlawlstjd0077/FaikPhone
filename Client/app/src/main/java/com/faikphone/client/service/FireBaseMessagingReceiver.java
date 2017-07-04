@@ -8,7 +8,6 @@ import com.faikphone.client.NotificationBuilder;
 import com.faikphone.client.activity.CallActivity;
 import com.faikphone.client.application.FaikPhoneApplication;
 import com.faikphone.client.utils.AppPreferences;
-import com.faikphone.client.utils.VibrateManager;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -16,6 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.reflect.Method;
+import java.net.URLDecoder;
 
 /**
  * Created by dsm_025 on 2017-04-13.
@@ -45,6 +45,8 @@ public class FireBaseMessagingReceiver extends FirebaseMessagingService {
                                 ? jsonObject.getString("name") : null,jsonObject.getString("number"));
                         break;
                     case "sms":
+                        NotificationBuilder.sms(getApplicationContext(), jsonObject.getString("name") != null
+                                ? jsonObject.getString("number") : null, URLDecoder.decode(jsonObject.getString("content")));
                         break;
                 }
             } else {

@@ -40,12 +40,12 @@
 
         <TextView
             android:id="@+id/tv_number"
-            android:layout_width="160dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_below="@id/tv_name"
             android:layout_centerInParent="true"
             android:text="휴대전화 010 - 2222 - 2222"
-            android:textSize="22sp"
+            android:textSize="28sp"
             android:textColor="#FFFFFF" />
     </RelativeLayout>
 
